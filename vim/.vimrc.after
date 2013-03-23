@@ -1,8 +1,22 @@
 :set autowrite
 
+" Trim whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
 let g:solarized_termcolors=256
 set t_Co=16
 set background=dark
 colorscheme solarized
+
+set wildmenu
+set wildmode=longest
+
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
