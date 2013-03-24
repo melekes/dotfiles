@@ -35,3 +35,10 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(bundler gem rvm debian git git-flow knife cap screen)
 
 source $ZSH/oh-my-zsh.sh
+
+# all of our zsh files
+for file in ${$ZSH/**/*.zsh}
+do
+  source $file
+done
+
