@@ -12,8 +12,8 @@ task :install do
   puts "======================================================"
   puts
 
-  process_templates(Dir.glob("#{ENV["PWD"]}/**/*.erb"))
-  file_operation(Dir.glob("#{ENV["PWD"]}/**/*.symlink"))
+  process_templates(Dir.glob("#{ENV["PWD"]}/**/.*.erb"))
+  file_operation(Dir.glob("#{ENV["PWD"]}/**/.*.symlink"))
 
   puts
   puts "======================================================"
@@ -33,6 +33,7 @@ private
 
   def process_templates(files)
     # .gitconfig requirements
+    @user = {}
     STDOUT.puts "Your email:"
     @user[:email] = STDIN.gets.strip
     STDOUT.puts "Your fullname:"
@@ -40,11 +41,12 @@ private
 
     # zshrc requirements
     STDOUT.puts "oh-my-zsh theme:"
-    @theme = STDIN.gets.strip || "robbyrussell"
+    @theme = STDIN.gets.strip
+    @theme = "robbyrussell" if @theme.blank?
 
     files.each do |f|
-      result = ERB.new(f).result(binding)
-      result_file = File.basename(f, '.*')
+      result = ERB.new(File.read(f)).result(binding)
+      result_file = f.chomp(File.extname(f))
       File.open(result_file, 'w+') do |file|
         file.write(result)
       end
