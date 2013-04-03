@@ -38,6 +38,10 @@ private
     STDOUT.puts "Your fullname:"
     @user[:fullname] = STDIN.gets.strip
 
+    # zshrc requirements
+    STDOUT.puts "oh-my-zsh theme:"
+    @theme = STDIN.gets.strip || "robbyrussell"
+
     files.each do |f|
       result = ERB.new(f).result(binding)
       result_file = File.basename(f, '.*')
