@@ -42,7 +42,7 @@ private
     # zshrc requirements
     STDOUT.puts "oh-my-zsh theme (default: robbyrussell):"
     @theme = STDIN.gets.strip
-    @theme = "robbyrussell" if @theme.blank?
+    @theme = "robbyrussell" if @theme.empty?
 
     files.each do |f|
       result = ERB.new(File.read(f)).result(binding)
