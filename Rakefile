@@ -32,8 +32,18 @@ private
   end
 
   def process_templates(files)
+    # .gitconfig requirements
+    STDOUT.puts "Your email:"
+    @user[:email] = STDIN.gets.strip
+    STDOUT.puts "Your fullname:"
+    @user[:fullname] = STDIN.gets.strip
+
     files.each do |f|
-      # TODO how to handle erb templates?
+      result = ERB.new(f).result(binding)
+      result_file = File.basename(f, '.*')
+      File.open(result_file, 'w+') do |file|
+        file.write(result)
+      end
     end
   end
 
