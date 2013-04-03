@@ -1,4 +1,4 @@
-# ~akalayev dotfiles (Under construction)
+# ~akalyaev dotfiles
 
 Usually I am working within the vagrant, but nonetheless, on my local
 machine I also need zsh for comfortable navigation and vim for demonstration purposes. This
