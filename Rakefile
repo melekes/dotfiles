@@ -40,7 +40,7 @@ private
     @user[:fullname] = STDIN.gets.strip
 
     # zshrc requirements
-    STDOUT.puts "oh-my-zsh theme:"
+    STDOUT.puts "oh-my-zsh theme (default: robbyrussell):"
     @theme = STDIN.gets.strip
     @theme = "robbyrussell" if @theme.blank?
 

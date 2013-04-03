@@ -11,7 +11,7 @@ Run this:
 ```sh
 git clone https://github.com/akalyaev/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-rake install
+PWD=~/.dotfiles rake install
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home
