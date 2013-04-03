@@ -39,7 +39,7 @@ plugins=(bundler gem rvm debian git git-flow knife cap screen)
 source $ZSH/oh-my-zsh.sh
 
 # all of our zsh files
-for file in ${$DOTFILES/**/*.zsh}
+for file ($DOTFILES/**/*.zsh)
 do
   source $file
 done
