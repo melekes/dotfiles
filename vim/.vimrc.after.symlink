@@ -30,3 +30,7 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+" Better commit message
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
