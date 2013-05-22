@@ -1,3 +1,8 @@
+" Want a different map leader than \
 let mapleader = ","
 
+" Autosave on focus lost
 let g:autosave_on_blur = "true"
+
+" tComment is better
+call janus#disable_plugin('nerdcommenter')
