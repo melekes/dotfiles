@@ -14,6 +14,7 @@ task :install do
 
   process_templates(Dir.glob("#{ENV["PWD"]}/**/.*.erb"))
   file_operation(Dir.glob("#{ENV["PWD"]}/**/.*.symlink"))
+  file_operation(Dir.glob("#{ENV["PWD"]}/**/*.symlink"))
 
   puts
   puts "======================================================"
