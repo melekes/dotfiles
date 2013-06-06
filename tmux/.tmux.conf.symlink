@@ -1,11 +1,6 @@
 # improve colors
 set -g default-terminal 'screen-256color'
 
-# a mouse
-set -g mode-mouse on
-setw -g mouse-select-window on
-setw -g mouse-select-pane on
-
 # act like vim
 setw -g mode-keys vi
 bind h select-pane -L
