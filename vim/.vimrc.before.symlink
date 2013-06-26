@@ -4,10 +4,13 @@ let mapleader = ","
 " Autosave on focus lost
 let g:autosave_on_blur = "true"
 
-" tComment is better
-call janus#disable_plugin('nerdcommenter')
-
 " unused
 call janus#disable_plugin('narrowregion')
 call janus#disable_plugin('zoomwin')
+call janus#disable_plugin('vroom')
+call janus#disable_plugin('vimwiki')
+call janus#disable_plugin('css-color')
+call janus#disable_plugin('dispatch')
+call janus#disable_plugin('webapi')
+call janus#disable_plugin('gist')
 
