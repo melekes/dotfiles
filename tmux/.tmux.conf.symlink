@@ -7,8 +7,13 @@ bind h select-pane -L
 bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
-bind-key -r C-h select-window -t :-
-bind-key -r C-l select-window -t :+
+
+# copy mode
+unbind p
+bind p paste-buffer
+bind -t vi-copy 'v' begin-selection
+bind -t vi-copy 'r' rectangle-toggle
+bind -t vi-copy 'y' copy-selection
 
 # act like GNU screen
 unbind C-b
