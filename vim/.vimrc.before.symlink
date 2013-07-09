@@ -13,4 +13,5 @@ call janus#disable_plugin('css-color')
 call janus#disable_plugin('dispatch')
 call janus#disable_plugin('webapi')
 call janus#disable_plugin('gist')
+call janus#disable_plugin('buffergator')
 
