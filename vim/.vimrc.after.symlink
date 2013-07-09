@@ -8,9 +8,6 @@ set t_Co=16
 set background=dark
 colorscheme solarized
 
-set wildmenu
-set wildmode=longest
-
 " More comfortable working with splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -19,6 +16,16 @@ nnoremap <C-H> <C-W><C-H>
 
 set splitbelow
 set splitright
+set relativenumber
+set wildmenu
+set wildmode=longest
+
+nnoremap / /\v
+vnoremap / /\v
+
+set colorcolumn=85
+
+nnoremap ; :
 
 " Ignore arrow keys
 nnoremap <up> <nop>
