@@ -1,14 +1,33 @@
-:set autowrite
-
-" Trim whitespaces on save
-autocmd BufWritePre * :%s/\s\+$//e
-
+" ================== Color Theme ==================
 let g:solarized_termcolors=256
 set t_Co=16
 set background=dark
 colorscheme solarized
 
-" More comfortable working with splits
+" ================== General settings ==================
+set autowrite
+set autoread
+
+set scrolloff=8
+set sidescrolloff=15
+set sidescroll=1
+
+set cursorline
+set colorcolumn=85
+set synmaxcol=128
+set autoindent
+set wildmenu
+set wildmode=list:longest
+set clipboard=unnamed
+
+nnoremap <leader>v V`]
+
+nnoremap ; :
+
+" Quick ESC
+imap jj <ESC>
+
+" ================== Windows And Splits ==================
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -17,16 +36,7 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-set scrolloff=3
-set cursorline
-set colorcolumn=85
-set synmaxcol=128
-set autoindent
-set wildmenu
-set wildmode=list:longest
-set modelines=0
-set clipboard=unnamed
-
+" ================== Search ==================
 nnoremap / /\v
 vnoremap / /\v
 set showmatch
@@ -36,26 +46,11 @@ nnoremap <tab> %
 vnoremap <tab> %
 nnoremap <leader>a :Ack
 
-nnoremap <leader>v V`]
-
-nnoremap ; :
-
-" Quick ESC
-imap jj <ESC>
-
-" Ignore arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
 " Better commit message
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
 au BufNewFile * set noeol
+
+" Trim whitespaces on save
+autocmd BufWritePre * :%s/\s\+$//e
 
