@@ -16,16 +16,32 @@ nnoremap <C-H> <C-W><C-H>
 
 set splitbelow
 set splitright
-set relativenumber
+
+set scrolloff=3
+set cursorline
+set colorcolumn=85
+set synmaxcol=128
+set autoindent
 set wildmenu
-set wildmode=longest
+set wildmode=list:longest
+set modelines=0
+set clipboard=unnamed
 
 nnoremap / /\v
 vnoremap / /\v
+set showmatch
+set gdefault
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+nnoremap <leader>a :Ack
 
-set colorcolumn=85
+nnoremap <leader>v V`]
 
 nnoremap ; :
+
+" Quick ESC
+imap jj <ESC>
 
 " Ignore arrow keys
 nnoremap <up> <nop>
@@ -40,4 +56,6 @@ inoremap <right> <nop>
 
 " Better commit message
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+au BufNewFile * set noeol
 
