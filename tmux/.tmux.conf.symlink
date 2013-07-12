@@ -25,16 +25,8 @@ bind -t vi-copy 'y' copy-selection
 unbind C-b
 set -g prefix C-f
 
-# https://github.com/erikw/tmux-powerline
-#### Powerline
-set-option -g status on
-set-option -g status-interval 2
-set-option -g status-utf8 on
-set-option -g status-justify "centre"
-set-option -g status-left-length 125
-set-option -g status-right-length 90
-set-option -g status-left "#(/opt/tmux-powerline/powerline.sh left)"
-set-option -g status-right "#(/opt/tmux-powerline/powerline.sh right)"
+# Hide status panel
+set -g status off
 
 # https://github.com/seebi/tmux-colors-solarized
 #### COLOUR (Solarized light)
