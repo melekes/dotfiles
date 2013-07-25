@@ -45,7 +45,6 @@ set gdefault
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
-nnoremap <leader>a :Ack
 
 " Better commit message
 autocmd Filetype gitcommit setlocal spell textwidth=72

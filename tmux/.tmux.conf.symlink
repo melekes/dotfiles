@@ -15,8 +15,6 @@ bind k select-pane -U
 bind l select-pane -R
 
 # copy mode
-unbind p
-bind p paste-buffer
 bind -t vi-copy 'v' begin-selection
 bind -t vi-copy 'r' rectangle-toggle
 bind -t vi-copy 'y' copy-selection
@@ -25,7 +23,7 @@ bind -t vi-copy 'y' copy-selection
 unbind C-b
 set -g prefix C-f
 
-# Hide status panel
+# Hide spanel
 set -g status off
 
 # https://github.com/seebi/tmux-colors-solarized
