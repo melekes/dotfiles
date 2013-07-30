@@ -47,10 +47,14 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 " Better commit message
-autocmd Filetype gitcommit setlocal spell textwidth=72
+au Filetype gitcommit setlocal spell textwidth=72
+
+" Enable spell checking for markdown files
+au BufRead *.md setlocal spell
+au BufRead *.markdown setlocal spell
 
 au BufNewFile * set noeol
 
 " Trim whitespaces on save
-autocmd BufWritePre * :%s/\s\+$//e
+au BufWritePre * :%s/\s\+$//e
 
