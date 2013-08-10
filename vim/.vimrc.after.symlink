@@ -46,6 +46,9 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
+" ================== Smart stuff ==================
+nnoremap <leader>ou :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs chromium-browser<CR><CR>
+
 " Better commit message
 au Filetype gitcommit setlocal spell textwidth=72
 

@@ -15,6 +15,8 @@
   ls = log --pretty=format':%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
   graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 
+  url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/git\\\\.undev\\\\.cc\\\\/\\\\1/g"'
+
 [color]
   diff = auto
   status = auto
