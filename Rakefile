@@ -65,7 +65,7 @@ private
 
       if File.exists?(target) && (!File.symlink?(target) || (File.symlink?(target) && File.readlink(target) != source))
         puts "[Overwriting] #{target}...leaving original at #{target}.backup..."
-        run %{ mv "$HOME/.#{file}" "$HOME/.#{file}.backup" }
+        run %{ mv "$HOME/#{file}" "$HOME/#{file}.backup" }
       end
 
       if method == :symlink
