@@ -37,6 +37,7 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# IDE #
+# CTags #
 #######
-.idea/
+tags
+gems.tags
