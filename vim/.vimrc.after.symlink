@@ -15,14 +15,15 @@ set synmaxcol=128
 set autoindent
 set wildmenu
 set wildmode=list:longest
-set clipboard=unnamed
+set clipboard=unnamedplus
 
-nnoremap <leader>v V`]
+" select entire file
+nnoremap <leader>v ggV`]
 
 nnoremap ; :
-
-" Quick ESC
 imap jj <ESC>
+nnoremap H _
+nnoremap L $
 
 " ================== Windows And Splits ==================
 nnoremap <C-J> <C-W><C-J>
