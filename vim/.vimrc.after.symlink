@@ -13,15 +13,17 @@ set cursorline
 set colorcolumn=85
 set synmaxcol=128
 set autoindent
-set wildmenu
 set wildmode=list:longest
+set wildmenu
 set clipboard=unnamedplus
 
 " select entire file
 nnoremap <leader>v ggV`]
 
+inoremap <ESC> <nop>
+inoremap jk <ESC>
+
 nnoremap ; :
-imap jj <ESC>
 nnoremap H _
 nnoremap L $
 
