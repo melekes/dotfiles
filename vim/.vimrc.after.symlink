@@ -44,15 +44,19 @@ set showmatch
 set gdefault
 nnoremap <leader><space> :noh<cr>
 
+" ================= Jumping ==================
 " Ctrlp for tags (https://github.com/ivalkeen/vim-ctrlp-tjump)
 nnoremap <c-]> :CtrlPtjump<cr>
 au FileType ruby,eruby nnoremap <silent> <buffer> <C-]> :call ctrlp#tjump#exec(RubyCursorIdentifier())<CR>
 
-" ================== Smart stuff ==================
+" previous buffer
+nnoremap <leader><leader> <c-^>
+
+" ============== Smart stuff =================
 " http://felixge.de/2013/08/08/vim-trick-open-current-line-on-github.html
 nnoremap <leader>ou :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs chromium-browser<CR><CR>
 
-" ================== Abbreviations ==================
+" ============= Abbreviations ================
 iabbrev ssig Anton Kalyaev <anton.kalyaev@gmail.com>
 
 " Better commit message
