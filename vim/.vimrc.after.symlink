@@ -15,6 +15,8 @@ set synmaxcol=128
 set autoindent
 set wildmode=list:longest
 set wildmenu
+set wildignore+=tags,gems.tags
+set tags+=gems.tags
 set clipboard=unnamedplus
 
 " select entire file
@@ -23,7 +25,6 @@ nnoremap <leader>v ggV`]
 inoremap <ESC> <nop>
 inoremap jk <ESC>
 
-nnoremap ; :
 nnoremap H _
 nnoremap L $
 
@@ -42,10 +43,6 @@ vnoremap / /\v
 set showmatch
 set gdefault
 nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
-
-set tags+=gems.tags
 
 " Ctrlp for tags (https://github.com/ivalkeen/vim-ctrlp-tjump)
 nnoremap <c-]> :CtrlPtjump<cr>
