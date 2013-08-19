@@ -11,10 +11,10 @@ call janus#disable_plugin('vroom')
 call janus#disable_plugin('vimwiki')
 call janus#disable_plugin('css-color')
 call janus#disable_plugin('dispatch')
-call janus#disable_plugin('webapi')
 call janus#disable_plugin('gist')
 call janus#disable_plugin('buffergator')
 call janus#disable_plugin('tagbar')
+call janus#disable_plugin('nerdcommenter')
 
 " ================== Plugins ====================
 " Airline
