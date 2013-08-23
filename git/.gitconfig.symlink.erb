@@ -43,15 +43,27 @@
 
 [core]
   excludesfile = ~/.gitignore_global
+  autocrlf = input
 
 [apply]
   whitespace = nowarn
 
+[merge]
+  tool = vimdiff
+
 [mergetool]
   keepBackup = false
+  prompt = false
+
+[diff]
+  tool = vimdiff
 
 [difftool]
   prompt = false
 
 [help]
   autocorrect = 1
+
+[init]
+  templatedir = ~/.git_template
+
