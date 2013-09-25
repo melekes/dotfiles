@@ -66,9 +66,8 @@ iabbrev ssig Anton Kalyaev <anton.kalyaev@gmail.com>
 " Better commit message
 au Filetype gitcommit setlocal spell textwidth=72
 
-" Enable spell checking for markdown files
-au BufRead *.md setlocal spell
-au BufRead *.markdown setlocal spell
+" Spelling
+source ~/.dotfiles/vim/spelling.vim
 
 au BufNewFile * set noeol
 
