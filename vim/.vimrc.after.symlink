@@ -52,6 +52,10 @@ au FileType ruby,eruby nnoremap <silent> <buffer> <C-]> :call ctrlp#tjump#exec(R
 " previous buffer
 nnoremap <leader><leader> <c-^>
 
+" methods
+nmap <tab> ]m
+nmap <s-tab> [m
+
 " ============== Smart stuff =================
 " http://felixge.de/2013/08/08/vim-trick-open-current-line-on-github.html
 nnoremap <leader>ou :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs chromium-browser<CR><CR>
