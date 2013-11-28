@@ -40,9 +40,9 @@ private
     @user[:fullname] = STDIN.gets.strip
 
     # zshrc requirements
-    STDOUT.puts "oh-my-zsh theme (default: robbyrussell):"
+    STDOUT.puts "oh-my-zsh theme (default: agnoster):"
     @theme = STDIN.gets.strip
-    @theme = "robbyrussell" if @theme.empty?
+    @theme = "agnoster" if @theme.empty?
 
     files.each do |f|
       result = ERB.new(File.read(f)).result(binding)
