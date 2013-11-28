@@ -13,7 +13,7 @@ set cursorline
 set colorcolumn=85
 set synmaxcol=128
 set autoindent
-set wildmode=list:longest
+set wildmode=list:longest,full
 set wildmenu
 set wildignore+=tags,gems.tags
 set tags+=gems.tags
@@ -27,6 +27,9 @@ inoremap jk <ESC>
 
 nnoremap H _
 nnoremap L $
+
+nmap j gj
+nmap k gk
 
 " ================== Windows And Splits ==================
 nnoremap <C-J> <C-W><C-J>
