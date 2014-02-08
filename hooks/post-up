@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ ! -e $HOME/.janus/vim-auto-save ]; then
+  git clone https://github.com/907th/vim-auto-save.git $HOME/.janus/vim-auto-save
+fi
+
+if [ ! -e $HOME/.janus/vim-multiple-cursors ]; then
+  git clone https://github.com/terryma/vim-multiple-cursors $HOME/.janus/vim-multiple-cursors
+fi
+
+if [ ! -e $HOME/.janus/vim-commentary ]; then
+  git clone https://github.com/tpope/vim-commentary.git $HOME/.janus/vim-commentary
+fi
+
+if [ ! -e $HOME/.janus/vim-airline ]; then
+  git clone https://github.com/bling/vim-airline.git $HOME/.janus/vim-airline
+fi
+
