@@ -22,6 +22,8 @@ set clipboard=unnamedplus
 " select entire file
 nnoremap <leader>v ggV`]
 
+inoremap jk <ESC>
+
 nnoremap H _
 nnoremap L $
 
