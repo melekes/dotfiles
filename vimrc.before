@@ -1,9 +1,6 @@
 " Want a different map leader than \
 let mapleader = ","
 
-" Autosave on focus lost
-let g:autosave_on_blur = "true"
-
 " unused
 call janus#disable_plugin('narrowregion')
 call janus#disable_plugin('zoomwin')
@@ -23,3 +20,6 @@ let g:airline_enable_branch = 0
 
 " Easymotion
 let g:EasyMotion_leader_key = ';'
+
+" AutoSave (https://github.com/907th/vim-auto-save)
+let g:auto_save = 1
