@@ -1,4 +1,7 @@
-# vagrant aliases:
+# Unix
+alias mkdir='mkdir -p'
+
+# Vagrant
 alias vst="vagrant status"
 alias vup="vagrant up"
 alias vpr="vagrant provision"
@@ -8,3 +11,9 @@ alias vssh="vagrant ssh"
 
 # vim
 alias v="vim"
+
+# Bundler
+alias b="bundle"
+
+# Include custom aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local

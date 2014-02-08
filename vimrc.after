@@ -22,9 +22,6 @@ set clipboard=unnamedplus
 " select entire file
 nnoremap <leader>v ggV`]
 
-inoremap <ESC> <nop>
-inoremap jk <ESC>
-
 nnoremap H _
 nnoremap L $
 
@@ -70,7 +67,7 @@ iabbrev ssig Anton Kalyaev <anton.kalyaev@gmail.com>
 au Filetype gitcommit setlocal spell textwidth=72
 
 " Spelling
-source ~/.dotfiles/vim/spelling.vim
+source ~/.vim-addons/spelling.vim
 
 au BufNewFile * set noeol
 
