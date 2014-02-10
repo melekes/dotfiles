@@ -16,3 +16,15 @@ if [ ! -e $HOME/.janus/vim-airline ]; then
   git clone https://github.com/bling/vim-airline.git $HOME/.janus/vim-airline
 fi
 
+if [ ! -e $HOME/.janus/vimux ]; then
+  git clone https://github.com/benmills/vimux.git $HOME/.janus/vimux
+fi
+
+if [ ! -e $HOME/.janus/vim-turbux ]; then
+  git clone https://github.com/jgdavey/vim-turbux.git $HOME/.janus/vim-turbux
+fi
+
+if [ ! -e $HOME/.janus/vim-gitgutter ]; then
+  git clone https://github.com/airblade/vim-gitgutter.git $HOME/.janus/vim-gitgutter
+fi
+
