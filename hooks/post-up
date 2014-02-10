@@ -28,3 +28,11 @@ if [ ! -e $HOME/.janus/vim-gitgutter ]; then
   git clone https://github.com/airblade/vim-gitgutter.git $HOME/.janus/vim-gitgutter
 fi
 
+if [ ! -e $HOME/.janus/vim-textobj-user ]; then
+  git clone https://github.com/kana/vim-textobj-user.git $HOME/.janus/vim-textobj-user
+fi
+
+if [ ! -e $HOME/.janus/vim-textobj-rubyblock ]; then
+  git clone https://github.com/nelstrom/vim-textobj-rubyblock.git $HOME/.janus/vim-textobj-rubyblock
+fi
+
