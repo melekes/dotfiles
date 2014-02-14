@@ -22,9 +22,6 @@
   excludesfile = ~/.gitignore_global
   autocrlf = input
 
-[merge]
-  ff = only
-
 [apply]
   whitespace = nowarn
 
@@ -37,3 +34,5 @@
 [include]
   path = .gitconfig.local
 
+[init]
+	templatedir = ~/.git_template
