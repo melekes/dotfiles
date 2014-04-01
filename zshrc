@@ -41,6 +41,10 @@ export EDITOR=vim
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# Load gvm
+export PATH=$PATH:$HOME/.gvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
 # Load scripts from bin
 export PATH="$HOME/.bin:$PATH"
 
