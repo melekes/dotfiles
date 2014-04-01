@@ -26,8 +26,12 @@
 [apply]
   whitespace = nowarn
 
+[merge]
+	tool = vimdiff
+
 [mergetool]
   keepBackup = false
+	prompt = false
 
 [difftool]
   prompt = false
@@ -37,3 +41,4 @@
 
 [init]
 	templatedir = ~/.git_template
+
