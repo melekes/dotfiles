@@ -15,5 +15,8 @@ alias v="vim"
 # Bundler
 alias b="bundle"
 
+# Google
+alias ggl="google"
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
