@@ -14,10 +14,6 @@ call janus#disable_plugin('tagbar')
 call janus#disable_plugin('nerdcommenter')
 
 " ================== Plugins ====================
-" Airline
-let g:airline_powerline_fonts = 1
-let g:airline_enable_branch = 0
-
 " Easymotion
 let g:EasyMotion_leader_key = ';'
 

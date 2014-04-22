@@ -12,8 +12,8 @@ if [ ! -e $HOME/.janus/vim-commentary ]; then
   git clone https://github.com/tpope/vim-commentary.git $HOME/.janus/vim-commentary
 fi
 
-if [ ! -e $HOME/.janus/vim-airline ]; then
-  git clone https://github.com/bling/vim-airline.git $HOME/.janus/vim-airline
+if [ ! -e $HOME/.janus/lightline.vim ]; then
+  git clone https://github.com/itchyny/lightline.vim.git $HOME/.janus/lightline.vim
 fi
 
 if [ ! -e $HOME/.janus/vimux ]; then
