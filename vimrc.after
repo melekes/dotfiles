@@ -76,3 +76,5 @@ au BufNewFile * set noeol
 " Trim whitespaces on save
 au BufWritePre * :%s/\s\+$//e
 
+cabbrev Afs AckFromSearch
+
