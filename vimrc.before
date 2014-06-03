@@ -2,16 +2,22 @@
 let mapleader = ","
 
 " unused
-call janus#disable_plugin('narrowregion')
-call janus#disable_plugin('zoomwin')
-call janus#disable_plugin('vroom')
-call janus#disable_plugin('vimwiki')
+call janus#disable_plugin('buffergator')
 call janus#disable_plugin('css-color')
 call janus#disable_plugin('dispatch')
 call janus#disable_plugin('gist')
-call janus#disable_plugin('buffergator')
-call janus#disable_plugin('tagbar')
+call janus#disable_plugin('narrowregion')
 call janus#disable_plugin('nerdcommenter')
+call janus#disable_plugin('tagbar')
+
+call janus#disable_plugin('snipmate')
+call janus#disable_plugin('vim-snippets')
+call janus#disable_plugin('vim-addon-mw-utils')
+
+call janus#disable_plugin('vim-trailing-whitespace')
+call janus#disable_plugin('vimwiki')
+call janus#disable_plugin('vroom')
+call janus#disable_plugin('zoomwin')
 
 " ================== Plugins ====================
 " Easymotion
