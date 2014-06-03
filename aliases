@@ -12,6 +12,10 @@ alias vssh="vagrant ssh"
 # vim
 alias v="vim"
 
+# git
+alias gs="git stash"
+alias gsp="git stash pop"
+
 # Bundler
 alias b="bundle"
 
