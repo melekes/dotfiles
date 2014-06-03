@@ -19,3 +19,9 @@ let g:EasyMotion_leader_key = ';'
 
 " AutoSave (https://github.com/907th/vim-auto-save)
 let g:auto_save = 1
+
+" RainbowParentheses (https://github.com/kien/rainbow_parentheses.vim)
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
