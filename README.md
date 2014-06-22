@@ -40,6 +40,7 @@ Put your customizations in dotfiles appended with `.local`:
 * `~/.gitconfig.local`
 * `~/.tmux.conf.local`
 * `~/.zshrc.local`
+* `~/.vimrc.local`
 
 For example, your `~/.aliases.local` might look like this:
 
@@ -51,11 +52,10 @@ Your `~/.gitconfig.local` might look like this:
     [alias]
       l = log --pretty=colored
     [pretty]
-      colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold
-blue)%an%Creset
+      colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(boldblue)%an%Creset
     [user]
-      name = Dan Croak
-      email = dan@thoughtbot.com
+      name = Joe Black
+      email = joe@black.com
 
 Your `~/.zshrc.local` might look like this:
 
@@ -65,10 +65,8 @@ Your `~/.zshrc.local` might look like this:
 ## What I am using
 
 * [vim](http://www.vim.org/)
-* -> [Janus](https://github.com/carlhuda/janus)
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* [tmux](http://robots.thoughtbot.com/a-tmux-crash-course). Prefix is
-  `Ctrl-f`
+* [tmux](http://robots.thoughtbot.com/a-tmux-crash-course). Prefix is `Ctrl-f`
 
 Shell aliases and scripts:
 
