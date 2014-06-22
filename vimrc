@@ -59,7 +59,9 @@ set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
 set autoindent
-set wildmode=list:longest,full
+set complete=.,b,u,]
+set completeopt=menu,preview
+set wildmode=list:longest,list:full
 set wildmenu
 set wildignore+=tags,gems.tags
 set tags+=gems.tags
