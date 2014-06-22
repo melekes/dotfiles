@@ -48,17 +48,18 @@ set autoread
 set cursorline
 set expandtab
 set modelines=0
+set tabstop=2
 set shiftwidth=2
 set colorcolumn=85
 set synmaxcol=128
 set ttyscroll=10
 set encoding=utf-8
-set tabstop=2
 set nowrap
 set number
 set nowritebackup
 set noswapfile
 set nobackup
+set hidden
 set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
@@ -105,9 +106,12 @@ autocmd VimEnter * set nosc
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
-" Allows you to enter sudo pass and save the file
-" when you forgot to open your file with sudo
-cmap W %!sudo tee > /dev/null %
+" Sudo write (,W)
+noremap <leader>W :w !sudo tee %<CR>
+
+" Toggle paste mode
+nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
+imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 
 " ================== Windows And Splits ==================
 nnoremap <C-J> <C-W><C-J>
@@ -127,7 +131,7 @@ set smartcase
 
 " Ag
 let g:agprg = 'ag --nogroup --nocolor --column --smart-case'
-cabbrev Ack AgFromSearch
+cabbrev Ag AgFromSearch
 
 " CtrlP
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
