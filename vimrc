@@ -26,6 +26,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 
 " Ruby
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 
 " Clojure

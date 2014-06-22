@@ -1,2 +1,5 @@
 #!/bin/sh
 
+# https://github.com/Valloric/YouCompleteMe
+# cd ~/.vim/bundle/YouCompleteMe
+# ./install.sh
