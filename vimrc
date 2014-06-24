@@ -12,6 +12,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'benmills/vimux'
+Plugin 'bogado/file-line'
 Plugin 'elzr/vim-json'
 Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/seoul256.vim'
@@ -29,15 +30,16 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 
 " Ruby
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tpope/vim-endwise'
+Plugin 'vim-ruby/vim-ruby'
 
 " Clojure
 Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-leiningen'
+Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-fireplace'
-Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-leiningen'
 Plugin 'vim-scripts/paredit.vim'
 
 call vundle#end()
