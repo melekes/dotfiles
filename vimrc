@@ -8,6 +8,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " My Bundles
 Plugin '907th/vim-auto-save'
+Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'benmills/vimux'
@@ -16,7 +17,9 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kien/ctrlp.vim'
+Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-commentary'
@@ -24,7 +27,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-vinegar'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
@@ -144,6 +146,12 @@ let g:auto_save = 1
 
 " Vim-Json
 let g:vim_json_syntax_conceal = 0
+
+" NERDTree
+nmap <leader>n :NERDTreeToggle<CR>
+
+" EasyMotion
+let g:EasyMotion_leader_key = ';'
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
