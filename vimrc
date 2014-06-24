@@ -47,30 +47,31 @@ let mapleader=","
 
 color seoul256
 
-set autoread
+set autoread                          "Reload files changed outside vim
 set cursorline
 set expandtab
 set modelines=0
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 set colorcolumn=85
 set synmaxcol=128
 set ttyscroll=10
 set encoding=utf-8
-set nowrap
+set nowrap                            "Don't wrap lines
 set number
 set nowritebackup
 set noswapfile
 set nobackup
 set hidden
-set scrolloff=8
+set scrolloff=8                       "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 set autoindent
 set complete=.,b,u,]
 set completeopt=menu,preview
 set wildmode=list:longest,list:full
-set wildmenu
+set wildmenu                          "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore+=tags,gems.tags
 set tags+=gems.tags
 set clipboard=unnamedplus
