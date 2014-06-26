@@ -137,7 +137,7 @@ set smartcase
 
 " Ag
 let g:agprg = 'ag --nogroup --nocolor --column --smart-case'
-cabbrev Ag AgFromSearch
+cabbrev Agfs AgFromSearch
 
 " CtrlP
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
