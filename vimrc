@@ -15,12 +15,12 @@ Plugin 'benmills/vimux'
 Plugin 'bogado/file-line'
 Plugin 'elzr/vim-json'
 Plugin 'itchyny/lightline.vim'
+Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-commentary'
@@ -28,6 +28,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-vinegar'
 
 " Ruby
 Plugin 'nelstrom/vim-textobj-rubyblock'
@@ -155,9 +156,6 @@ let g:auto_save = 1
 
 " Vim-Json
 let g:vim_json_syntax_conceal = 0
-
-" NERDTree
-nmap <leader>n :NERDTreeToggle<CR>
 
 " EasyMotion
 let g:EasyMotion_leader_key = ';'
