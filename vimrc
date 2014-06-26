@@ -119,6 +119,12 @@ noremap <leader>W :w !sudo tee %<CR>
 nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 
+" Resize splits when the window is resized
+au VimResized * :wincmd =
+
+" Automatically removing all trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 " ================== Windows And Splits ==================
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
