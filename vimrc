@@ -14,13 +14,13 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'benmills/vimux'
 Plugin 'bogado/file-line'
 Plugin 'elzr/vim-json'
+Plugin 'fholgado/minibufexpl.vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'junegunn/seoul256.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tommcdo/vim-exchange'
@@ -29,7 +29,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-vinegar'
+
+" Themes
+Plugin 'junegunn/seoul256.vim'
+Plugin 'sjl/badwolf'
 
 " Ruby
 Plugin 'nelstrom/vim-textobj-rubyblock'
@@ -49,7 +52,7 @@ filetype plugin indent on
 
 let mapleader=","
 
-color seoul256
+color badwolf
 
 set autoread                          "Reload files changed outside vim
 set cursorline
@@ -64,6 +67,7 @@ set ttyscroll=10
 set encoding=utf-8
 set nowrap                            "Don't wrap lines
 set number
+set relativenumber
 set nowritebackup
 set noswapfile
 set nobackup
@@ -160,6 +164,20 @@ let g:vim_json_syntax_conceal = 0
 
 " EasyMotion
 let g:EasyMotion_leader_key = ';'
+
+" NERDTree
+nmap <leader>n :NERDTreeToggle<CR>
+
+" MiniBufExplorer
+nmap <Leader>m :MBEFocus<cr>
+
+" lightline
+let g:lightline = {
+    \ 'active': {
+    \   'right': [ [ 'lineinfo' ],
+    \              [ 'percent' ] ]
+    \ }
+    \ }
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
