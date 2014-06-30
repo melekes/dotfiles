@@ -54,35 +54,37 @@ let mapleader=","
 
 color badwolf
 
-set autoread                          "Reload files changed outside vim
-set cursorline
+set autoread                          " Reload files changed outside vim
+set cursorline                        " Highlight current line
 set expandtab
-set modelines=0
-set tabstop=2
+set modeline                          " Respect modeline in files
+set tabstop=2                         " Make tabs as wide as two spaces
 set softtabstop=2
 set shiftwidth=2
 set colorcolumn=85
 set synmaxcol=128
+set ttyfast                           " Optimize for fast terminal connections
 set ttyscroll=10
 set encoding=utf-8
-set nowrap                            "Don't wrap lines
-set number
+set nowrap                            " Don't wrap lines
+set number                            " Enable line numbers
 set relativenumber
 set nowritebackup
 set noswapfile
 set nobackup
 set hidden
-set scrolloff=8                       "Start scrolling when we're 8 lines away from margins
+set scrolloff=8                       " Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 set autoindent
 set complete=.,b,u,]
 set completeopt=menu,preview
 set wildmode=list:longest,list:full
-set wildmenu                          "enable ctrl-n and ctrl-p to scroll thru matches
+set wildmenu                          " Enhance command-line completion
 set wildignore+=tags,gems.tags
 set tags+=gems.tags
 set clipboard=unnamedplus
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
 
 " ================== Custom Mappings ==================
 " Quick ESC
@@ -115,9 +117,6 @@ au BufNewFile * set noeol
 " No show command
 autocmd VimEnter * set nosc
 
-" Display extra whitespace
-set list listchars=tab:»·,trail:·
-
 " Sudo write (,W)
 noremap <leader>W :w !sudo tee %<CR>
 
@@ -143,8 +142,8 @@ set splitright
 " ================== Search ==================
 nnoremap / /\v
 vnoremap / /\v
-set hlsearch
-set ignorecase
+set hlsearch    " Highlight searches
+set ignorecase  " Ignore case of searches
 set smartcase
 
 " Ag
