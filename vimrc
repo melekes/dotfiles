@@ -42,9 +42,7 @@ Plugin 'vim-ruby/vim-ruby'
 " Clojure
 Plugin 'amdt/vim-niji'
 Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-leiningen'
 Plugin 'vim-scripts/paredit.vim'
 
 call vundle#end()
