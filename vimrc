@@ -169,7 +169,8 @@ nmap <leader>n :NERDTreeToggle<CR>
 
 " MiniBufExplorer
 nmap <Leader>m :MBEFocus<cr>
-let g:miniBufExplBRSplit = 0 " always stick to the edge
+let g:miniBufExplBRSplit = 0 "Always stick to the edge
+let g:miniBufExplMaxSize = 1 "Set maximum height to 1 line
 
 " lightline
 let g:lightline = {
