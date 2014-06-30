@@ -40,8 +40,8 @@ Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
 
 " Clojure
+Plugin 'amdt/vim-niji'
 Plugin 'guns/vim-clojure-static'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
