@@ -10,17 +10,18 @@ alias vre="vagrant reload"
 alias vssh="vagrant ssh"
 
 # vim
-alias v="vim"
+alias e=$EDITOR
 
 # git
+alias g="git"
+alias gb="git branch"
+alias gd="git diff"
+alias gco="git checkout"
+alias gst="git status"
 alias gs="git stash"
 alias gsp="git stash pop"
 
-# Bundler
-alias b="bundle"
-
-# Google
-alias ggl="google"
-
 # Include custom aliases
-[[ -f ~/.aliases.local ]] && source ~/.aliases.local
+if test -e ~/.aliases.local
+  source ~/.aliases.local
+end
