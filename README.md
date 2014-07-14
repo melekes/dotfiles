@@ -64,6 +64,8 @@ Your `~/.config/fish/config.fish.local` might look like this:
 Shell aliases and scripts:
 
 * `g` for `git`.
+* `e` for $EDITOR.
+* vagrant aliases (`vup`, `vhl`, `vssh`, etc.).
 * `replace foo bar **/*.rb` to find and replace within a given list of
   files.
 
