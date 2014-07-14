@@ -1,5 +1,6 @@
 set nocompatible
-set shell=/bin/bash
+
+" Plugin setup ------ {{{
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -7,15 +8,16 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-" My Bundles
 Plugin '907th/vim-auto-save'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'benmills/vimux'
 Plugin 'bogado/file-line'
 Plugin 'elzr/vim-json'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'honza/vim-snippets'
 Plugin 'itchyny/lightline.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kien/ctrlp.vim'
@@ -48,42 +50,49 @@ Plugin 'vim-scripts/paredit.vim'
 
 call vundle#end()
 filetype plugin indent on
+" }}}
 
-let mapleader=","
+let mapleader="," " Remap the leader from \ to ,
 
 color badwolf
 
+set shell=/bin/bash                   " required for Vim to work inside Fish shell
 set autoread                          " Reload files changed outside vim
 set cursorline                        " Highlight current line
-set expandtab
+set expandtab                         " Insert spaces instead of actually tabs
 set modeline                          " Respect modeline in files
-set tabstop=2                         " Make tabs as wide as two spaces
-set softtabstop=2
-set shiftwidth=2
+set tabstop=2                         " Number of spaces each tab counts for
+set softtabstop=2                     " Number of spaces for some tab operations
+set shiftwidth=2                      " The space << and >> moves the lines
+set autoindent                        " Indent the next line matching the previous line
+set smartindent                       " Smart auto-indent when creating a new line
 set colorcolumn=85
-set synmaxcol=128
+set synmaxcol=300                     " The max number of columns to try and highlight
 set ttyfast                           " Optimize for fast terminal connections
-set ttyscroll=10
-set encoding=utf-8
+set lazyredraw                        " Don't redraw vim in all situations
+set encoding=utf-8                    " Set the default encodings just in case $LANG isn't set
 set nowrap                            " Don't wrap lines
 set number                            " Enable line numbers
 set relativenumber
-set nowritebackup
-set noswapfile
-set nobackup
+set nowritebackup                     " Don't create a backup when overwriting a file
+set noswapfile                        " Don't write swap files
+set nobackup                          " Don't keep backup files
 set hidden
-set scrolloff=8                       " Start scrolling when we're 8 lines away from margins
-set sidescrolloff=15
-set sidescroll=1
-set autoindent
-set complete=.,b,u,]
+set scrolloff=5                       " Lines the cursor is to the edge before scrolling
+set complete=.,w,b,u,t,i
 set completeopt=menu,preview
+set wildmenu
 set wildmode=list:longest,list:full
-set wildmenu                          " Enhance command-line completion
+set wildignore+=.hg,.git,.svn                           " Version control
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg          " Binary images
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.pyc  " Compiled object files
 set wildignore+=tags,gems.tags
 set tags+=gems.tags
 set clipboard=unnamedplus
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
+set history=1000                      " The number of history items to remember
+set nojoinspaces                      " Don't add 2 spaces when using J
+set title                             " Change the terminal's title
 
 " ================== Custom Mappings ==================
 " Quick ESC
@@ -98,6 +107,11 @@ nmap <leader>fef ggVG=
 " Jump to the next row on long lines
 nnoremap j gj
 nnoremap k gk
+
+nnoremap H ^
+vnoremap H ^
+nnoremap L g_
+vnoremap L g_
 
 " Switch between last two buffers
 nnoremap <leader><leader> <C-^>
@@ -128,6 +142,11 @@ au VimResized * :wincmd =
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Default text width to 80
+if &textwidth == 0
+  set textwidth=80
+endif
 
 " ================== Windows And Splits ==================
 nnoremap <C-J> <C-W><C-J>
@@ -181,6 +200,9 @@ let g:lightline = {
 
 " Syntastic
 let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<C-X>"
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
