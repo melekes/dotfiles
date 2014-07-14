@@ -87,21 +87,22 @@ set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg          " Binary images
 set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.pyc  " Compiled object files
 set wildignore+=tags,gems.tags
 set tags+=gems.tags
-set clipboard=unnamedplus
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
-set history=1000                      " The number of history items to remember
 set nojoinspaces                      " Don't add 2 spaces when using J
 set title                             " Change the terminal's title
 
-" ================== Custom Mappings ==================
-" Quick ESC
-inoremap jk <ESC>
+if has("clipboard")                   " If the feature is available
+  set clipboard=unnamed               " copy to the system clipboard
 
-" Select entire file
-nnoremap <leader>v ggV`]
+  if has("unnamedplus")
+    set clipboard+=unnamedplus
+  endif
+endif
 
-" Format entire file
-nmap <leader>fef ggVG=
+" Custom Mappings ------ {{{
+inoremap jk <ESC>                     " Quick ESC
+nnoremap <leader>v ggV`]              " Select entire file
+nmap <leader>fef ggVG=                " Format entire file
 
 " Jump to the next row on long lines
 nnoremap j gj
@@ -112,8 +113,7 @@ vnoremap H ^
 nnoremap L g_
 vnoremap L g_
 
-" Switch between last two buffers
-nnoremap <leader><leader> <C-^>
+nnoremap <leader><leader> <C-^>       " Switch between last two buffers
 
 " http://felixge.de/2013/08/08/vim-trick-open-current-line-on-github.html
 nnoremap <leader>ou :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs chromium-browser<CR><CR>
@@ -125,9 +125,6 @@ au Filetype gitcommit setlocal spell textwidth=72
 source ~/.vim-addons/spelling.vim
 
 au BufNewFile * set noeol
-
-" No show command
-autocmd VimEnter * set nosc
 
 " Sudo write (,W)
 noremap <leader>W :w !sudo tee %<CR>
@@ -146,8 +143,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 if &textwidth == 0
   set textwidth=80
 endif
+" }}}
 
-" ================== Windows And Splits ==================
+" Windows And Splits ------ {{{
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -155,14 +153,18 @@ nnoremap <C-H> <C-W><C-H>
 
 set splitbelow
 set splitright
+" }}}
 
-" ================== Search ==================
+" Search ------ {{{
 nnoremap / /\v
 vnoremap / /\v
-set hlsearch    " Highlight searches
-set ignorecase  " Ignore case of searches
+set gdefault                          " Adds g at the end of substitutions by default
+set hlsearch                          " Highlight searches
+set ignorecase                        " Ignore case of searches
 set smartcase
+" }}}
 
+" Plugins ------ {{{
 " Ag
 let g:agprg = 'ag --nogroup --nocolor --column --smart-case'
 cabbrev Agfs AgFromSearch
@@ -202,6 +204,7 @@ let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<C-X>"
+" }}}
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
