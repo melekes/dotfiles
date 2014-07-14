@@ -52,7 +52,7 @@ call vundle#end()
 filetype plugin indent on
 " }}}
 
-let mapleader="," " Remap the leader from \ to ,
+let mapleader=","                     " Remap the leader from \ to ,
 
 color badwolf
 
@@ -100,9 +100,14 @@ if has("clipboard")                   " If the feature is available
 endif
 
 " Custom Mappings ------ {{{
-inoremap jk <ESC>                     " Quick ESC
-nnoremap <leader>v ggV`]              " Select entire file
-nmap <leader>fef ggVG=                " Format entire file
+" Quick ESC
+inoremap jk <ESC>
+
+" Select entire file
+nnoremap <leader>v ggV`]
+
+" Format entire file
+nmap <leader>fef ggVG=
 
 " Jump to the next row on long lines
 nnoremap j gj
@@ -113,7 +118,8 @@ vnoremap H ^
 nnoremap L g_
 vnoremap L g_
 
-nnoremap <leader><leader> <C-^>       " Switch between last two buffers
+" Switch between last two buffers
+nnoremap <leader><leader> <C-^>
 
 " http://felixge.de/2013/08/08/vim-trick-open-current-line-on-github.html
 nnoremap <leader>ou :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs chromium-browser<CR><CR>
