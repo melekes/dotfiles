@@ -60,7 +60,6 @@ set shell=/bin/bash                   " required for Vim to work inside Fish she
 set autoread                          " Reload files changed outside vim
 set cursorline                        " Highlight current line
 set expandtab                         " Insert spaces instead of actually tabs
-set modeline                          " Respect modeline in files
 set tabstop=2                         " Number of spaces each tab counts for
 set softtabstop=2                     " Number of spaces for some tab operations
 set shiftwidth=2                      " The space << and >> moves the lines
