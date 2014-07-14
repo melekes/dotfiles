@@ -14,6 +14,8 @@ alias e=$EDITOR
 
 # git
 alias g="git"
+alias gc="git commit"
+alias ga="git add"
 alias gb="git branch"
 alias gd="git diff"
 alias gco="git checkout"
