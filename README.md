@@ -1,11 +1,5 @@
 # ~akalyaev dotfiles
 
-## Requirements
-
-Set zsh as your login shell.
-
-    chsh -s /bin/zsh
-
 ## Install
 
 Clone onto your laptop:
@@ -39,7 +33,7 @@ Put your customizations in dotfiles appended with `.local`:
 * `~/.aliases.local`
 * `~/.gitconfig.local`
 * `~/.tmux.conf.local`
-* `~/.zshrc.local`
+* `~/.config/fish/config.fish.local`
 * `~/.vimrc.local`
 
 For example, your `~/.aliases.local` might look like this:
@@ -57,22 +51,19 @@ Your `~/.gitconfig.local` might look like this:
       name = Joe Black
       email = joe@black.com
 
-Your `~/.zshrc.local` might look like this:
+Your `~/.config/fish/config.fish.local` might look like this:
 
-    # recommended by brew doctor
-    export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+    set PATH $PATH /usr/local/bin
 
 ## What I am using
 
 * [vim](http://www.vim.org/)
-* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [tmux](http://robots.thoughtbot.com/a-tmux-crash-course). Prefix is `Ctrl-f`
+* [fish](https://github.com/fish-shell/fish-shell)
 
 Shell aliases and scripts:
 
-* `b` for `bundle`.
-* `g` with no arguments is `git status` and with arguments acts like
-  `git`.
+* `g` for `git`.
 * `replace foo bar **/*.rb` to find and replace within a given list of
   files.
 
