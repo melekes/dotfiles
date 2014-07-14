@@ -179,6 +179,9 @@ let g:lightline = {
     \ }
     \ }
 
+" Syntastic
+let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
