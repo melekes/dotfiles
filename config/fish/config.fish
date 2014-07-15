@@ -1,7 +1,7 @@
 # Oh My Fish!
 set fish_path $HOME/.oh-my-fish
 set fish_theme l
-set fish_plugins bundler rvm gvm
+set fish_plugins bundler rvm gvm vi-mode autojump
 . $fish_path/oh-my-fish.fish
 
 set -U EDITOR vim
