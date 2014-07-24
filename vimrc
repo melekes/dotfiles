@@ -16,7 +16,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'benmills/vimux'
 Plugin 'bogado/file-line'
 Plugin 'elzr/vim-json'
-Plugin 'fholgado/minibufexpl.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'itchyny/lightline.vim'
 Plugin 'kana/vim-textobj-user'
@@ -191,11 +190,6 @@ let g:EasyMotion_leader_key = ';'
 
 " NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
-
-" MiniBufExplorer
-nmap <Leader>m :MBEFocus<cr>
-let g:miniBufExplBRSplit = 0 "Always stick to the edge
-let g:miniBufExplMaxSize = 1 "Set maximum height to 1 line
 
 " lightline
 let g:lightline = {
