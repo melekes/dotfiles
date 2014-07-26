@@ -33,13 +33,13 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 
 " Themes
-Plugin 'junegunn/seoul256.vim'
 Plugin 'sjl/badwolf'
 
 " Ruby
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'jgdavey/vim-turbux'
 
 " Clojure
 Plugin 'amdt/vim-niji'
