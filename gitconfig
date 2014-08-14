@@ -3,7 +3,7 @@
 
 [alias]
   co = checkout
-  ci = commit
+  ci = commit -v
   st = status
   br = branch
   up = pull --rebase
@@ -42,3 +42,5 @@
 [init]
 	templatedir = ~/.git_template
 
+[commit]
+  message = ~/.gitmessage.txt
