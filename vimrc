@@ -52,7 +52,7 @@ call vundle#end()
 filetype plugin indent on
 " }}}
 
-let mapleader=","                     " Remap the leader from \ to ,
+let mapleader="\<Space>"              " Remap the leader from \ to <Space>
 
 color badwolf
 
