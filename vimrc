@@ -57,13 +57,11 @@ let mapleader="\<Space>"              " Remap the leader from \ to <Space>
 color badwolf
 
 set shell=/bin/bash                   " required for Vim to work inside Fish shell
-set autoread                          " Reload files changed outside vim
 set cursorline                        " Highlight current line
 set expandtab                         " Insert spaces instead of actually tabs
 set tabstop=2                         " Number of spaces each tab counts for
 set softtabstop=2                     " Number of spaces for some tab operations
 set shiftwidth=2                      " The space << and >> moves the lines
-set autoindent                        " Indent the next line matching the previous line
 set smartindent                       " Smart auto-indent when creating a new line
 set colorcolumn=85
 set synmaxcol=300                     " The max number of columns to try and highlight
@@ -78,9 +76,8 @@ set noswapfile                        " Don't write swap files
 set nobackup                          " Don't keep backup files
 set hidden
 set scrolloff=5                       " Lines the cursor is to the edge before scrolling
-set complete=.,w,b,u,t,i
+set complete=.,w,b,u,t
 set completeopt=menu,preview
-set wildmenu
 set wildmode=list:longest,list:full
 set wildignore+=.hg,.git,.svn                           " Version control
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg          " Binary images
