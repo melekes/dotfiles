@@ -14,12 +14,12 @@ alias e=$EDITOR
 
 # git
 alias g="git"
-alias gc="git commit"
+alias gc="git ci"
 alias ga="git add"
-alias gb="git branch"
+alias gb="git br"
 alias gd="git diff"
-alias gco="git checkout"
-alias gst="git status"
+alias gco="git co"
+alias gst="git st"
 alias gs="git stash"
 alias gsp="git stash pop"
 
