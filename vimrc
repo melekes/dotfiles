@@ -146,6 +146,11 @@ autocmd BufWritePre * :%s/\s\+$//e
 if &textwidth == 0
   set textwidth=80
 endif
+
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
 " }}}
 
 " Windows And Splits ------ {{{
