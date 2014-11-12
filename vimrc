@@ -48,6 +48,10 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'vim-scripts/paredit.vim'
 
+" Erlang
+Plugin 'edkolev/erlang-motions.vim'
+Plugin 'jimenezrick/vimerl'
+
 call vundle#end()
 filetype plugin indent on
 " }}}
@@ -206,7 +210,7 @@ let g:lightline = {
 let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<C-X>"
+let g:UltiSnipsExpandTrigger="<c-e>"
 " }}}
 
 " Local config
