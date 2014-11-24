@@ -32,7 +32,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
-Plugin 'octref/RootIgnore'
 
 " Themes
 Plugin 'sjl/badwolf'
@@ -52,6 +51,9 @@ Plugin 'vim-scripts/paredit.vim'
 " Erlang
 Plugin 'edkolev/erlang-motions.vim'
 Plugin 'jimenezrick/vimerl'
+
+" Distraction free writing
+Plugin 'junegunn/goyo.vim'
 
 call vundle#end()
 filetype plugin indent on
