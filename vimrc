@@ -150,10 +150,7 @@ au VimResized * :wincmd =
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Default text width to 80
-if &textwidth == 0
-  set textwidth=80
-endif
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
