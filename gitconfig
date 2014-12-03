@@ -41,6 +41,3 @@
 
 [init]
 	templatedir = ~/.git_template
-
-[commit]
-  template = ~/.gitmessage.txt
