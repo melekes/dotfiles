@@ -45,7 +45,6 @@ Plugin 'jgdavey/vim-turbux'
 
 " Clojure
 Plugin 'amdt/vim-niji'
-Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'vim-scripts/paredit.vim'
 
