@@ -15,6 +15,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'benmills/vimux'
 Plugin 'bogado/file-line'
+Plugin 'chrisbra/vim-diff-enhanced'
 Plugin 'elzr/vim-json'
 Plugin 'gitignore.vim'
 Plugin 'honza/vim-snippets'
@@ -212,6 +213,7 @@ let g:syntastic_erlang_checkers = ['syntaxerl']
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-e>"
+
 " }}}
 
 " Local config
