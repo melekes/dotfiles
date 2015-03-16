@@ -10,6 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin '907th/vim-auto-save'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Shougo/unite.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
@@ -28,6 +29,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sickill/vim-pasta'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'thinca/vim-ref'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
@@ -213,6 +215,13 @@ let g:syntastic_erlang_checkers = ['syntaxerl']
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-e>"
+
+" Vim-ref
+let g:ref_use_vimproc = 1
+let g:ref_open = 'split'
+let g:ref_cache_dir = expand($TMP . '/vim_ref_cache/')
+nno <leader>K :<C-u>Unite ref/erlang
+            \ -vertical -default-action=split<CR>
 
 " }}}
 
