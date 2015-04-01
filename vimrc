@@ -37,6 +37,7 @@ Plugin 'tpope/vim-surround'
 
 " Themes
 Plugin 'sjl/badwolf'
+Plugin 'altercation/vim-colors-solarized'
 
 " Ruby
 Plugin 'nelstrom/vim-textobj-rubyblock'
@@ -62,7 +63,9 @@ filetype plugin indent on
 
 let mapleader="\<Space>"              " Remap the leader from \ to <Space>
 
-color badwolf
+syntax enable
+set background=dark
+colorscheme solarized
 
 set shell=/bin/bash                   " required for Vim to work inside Fish shell
 set cursorline                        " Highlight current line
