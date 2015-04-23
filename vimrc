@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin '907th/vim-auto-save'
+Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
