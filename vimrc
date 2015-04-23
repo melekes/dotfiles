@@ -64,7 +64,7 @@ filetype plugin indent on
 let mapleader="\<Space>"              " Remap the leader from \ to <Space>
 
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
 set shell=/bin/bash                   " required for Vim to work inside Fish shell
