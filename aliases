@@ -1,6 +1,3 @@
-# Unix
-alias mkdir='mkdir -p'
-
 # Vagrant
 alias vst="vagrant status"
 alias vup="vagrant up"
