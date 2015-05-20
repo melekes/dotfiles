@@ -38,6 +38,10 @@ ehthumbs.db
 Thumbs.db
 
 # CTags #
-#######
+#########
 tags
 gems.tags
+
+# Vim files #
+#############
+Session.vim
