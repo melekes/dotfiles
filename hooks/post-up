@@ -1,9 +1,2 @@
 #!/bin/sh
 
-# https://github.com/Valloric/YouCompleteMe
-# cd ~/.vim/bundle/YouCompleteMe
-# ./install.sh
-
-# git clone git://github.com/ten0s/syntaxerl.git
-# cd syntaxerl
-# make

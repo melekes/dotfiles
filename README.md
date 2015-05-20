@@ -1,5 +1,15 @@
 # ~akalyaev dotfiles
 
+## What I am using
+
+* [vim](http://www.vim.org/) +
+  [Vundle](https://github.com/gmarik/Vundle.vim)
+* [tmux](http://robots.thoughtbot.com/a-tmux-crash-course) (prefix is `Ctrl-f`) +
+  [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+* [fish](https://github.com/fish-shell/fish-shell)
+
+Be sure, you had these installed before proceeding.
+
 ## Install
 
 Clone onto your laptop:
@@ -26,6 +36,16 @@ configuration file is symlinked in.
 You can safely run `rcup` multiple times to update:
 
     rcup
+
+## After steps
+
+Install Vim plugins:
+
+    vim +PluginInstall +qall
+
+Some plugins may require additional steps (e.g. YouCompleteMe, SyntaxErl).
+
+Install Tmux plugins: run tmux and hit `Ctrl-f + I`.
 
 ## Make your own customizations
 
@@ -56,13 +76,6 @@ Your `~/.config/fish/config.fish.local` might look like this:
 
     set PATH $PATH /usr/local/bin
 
-## What I am using
-
-* [vim](http://www.vim.org/) +
-  [Vundle](https://github.com/gmarik/Vundle.vim)
-* [tmux](http://robots.thoughtbot.com/a-tmux-crash-course). Prefix is `Ctrl-f` +
-  [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
-* [fish](https://github.com/fish-shell/fish-shell)
 
 Shell aliases and scripts:
 
