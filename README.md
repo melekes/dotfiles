@@ -6,9 +6,10 @@
   [Vundle](https://github.com/gmarik/Vundle.vim)
 * [tmux](http://robots.thoughtbot.com/a-tmux-crash-course) (prefix is `Ctrl-f`) +
   [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
-* [fish](https://github.com/fish-shell/fish-shell)
+* [fish](https://github.com/fish-shell/fish-shell) +
+  [Oh My Fish!](https://github.com/bpinto/oh-my-fish)
 
-Be sure, you had these installed before proceeding.
+*Be sure, you had these installed before proceeding.*
 
 ## Install
 
