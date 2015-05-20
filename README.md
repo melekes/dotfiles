@@ -58,8 +58,10 @@ Your `~/.config/fish/config.fish.local` might look like this:
 
 ## What I am using
 
-* [vim](http://www.vim.org/)
-* [tmux](http://robots.thoughtbot.com/a-tmux-crash-course). Prefix is `Ctrl-f`
+* [vim](http://www.vim.org/) +
+  [Vundle](https://github.com/gmarik/Vundle.vim)
+* [tmux](http://robots.thoughtbot.com/a-tmux-crash-course). Prefix is `Ctrl-f` +
+  [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 * [fish](https://github.com/fish-shell/fish-shell)
 
 Shell aliases and scripts:
