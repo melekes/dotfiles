@@ -135,13 +135,17 @@ nnoremap <leader><leader> <C-^>
 " http://felixge.de/2013/08/08/vim-trick-open-current-line-on-github.html
 nnoremap <leader>ou :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs chromium-browser<CR><CR>
 
+augroup vimrc
+  autocmd!
+augroup END
+
 " Better commit message
-au Filetype gitcommit setlocal spell textwidth=72
+au vimrc Filetype gitcommit setlocal spell textwidth=72
 
 " Spelling
 source ~/.vim-addons/spelling.vim
 
-au BufNewFile * set noeol
+au vimrc BufNewFile * set noeol
 
 " Sudo write (,W)
 noremap <leader>W :w !sudo tee %<CR>
@@ -151,12 +155,12 @@ nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 
 " Resize splits when the window is resized
-au VimResized * :wincmd =
+au vimrc VimResized * :wincmd =
 
 " Automatically removing all trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+au vimrc BufWritePre * :%s/\s\+$//e
 
-au BufRead,BufNewFile *.md setlocal textwidth=80
+au vimrc BufRead,BufNewFile *.md setlocal textwidth=80
 
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
