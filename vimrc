@@ -28,7 +28,6 @@ NeoBundle 'Valloric/YouCompleteMe', {
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'benmills/vimux'
 NeoBundle 'bogado/file-line'
-NeoBundle 'chrisbra/vim-diff-enhanced'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'gitignore.vim'
@@ -44,7 +43,6 @@ NeoBundle 'sickill/vim-pasta'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-sensible'
@@ -68,9 +66,6 @@ NeoBundle 'vim-scripts/paredit.vim'
 " Erlang
 NeoBundle 'edkolev/erlang-motions.vim'
 NeoBundle 'jimenezrick/vimerl'
-
-" Distraction free writing
-NeoBundle 'junegunn/goyo.vim'
 
 " Required:
 call neobundle#end()
