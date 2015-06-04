@@ -10,15 +10,16 @@ alias vssh="vagrant ssh"
 alias e=$EDITOR
 
 # git
-alias gc="git commit"
 alias ga="git add"
-alias gb="git branch"
+alias gb="git br"
+alias gc="git ci"
+alias gco="git co"
 alias gd="git diff"
-alias gco="git checkout"
-alias gst="git status"
+alias glp="git lp"
+alias gm="git merge"
 alias gs="git stash"
 alias gsp="git stash pop"
-alias gm="git merge"
+alias gst="git st"
 
 # Include custom aliases
 if test -e ~/.aliases.local
