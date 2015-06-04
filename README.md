@@ -44,6 +44,10 @@ Install Vim plugins:
 
     vim +NeoBundleInstall +qall
 
+Plus tools that Vim uses:
+
+- https://github.com/ten0s/syntaxerl
+
 Install Tmux plugins: run tmux and hit `Ctrl-f + I`.
 
 ## Make your own customizations
