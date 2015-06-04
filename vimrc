@@ -1,68 +1,87 @@
-set nocompatible
+"NeoBundle Scripts-----------------------------
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
-" Plugin setup ------ {{{
-filetype off
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Required:
+call neobundle#begin(expand('~/.vim/bundle'))
 
-Plugin 'gmarik/Vundle.vim'
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-Plugin '907th/vim-auto-save'
-Plugin 'ConradIrwin/vim-bracketed-paste'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'benmills/vimux'
-Plugin 'bogado/file-line'
-Plugin 'chrisbra/vim-diff-enhanced'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'elzr/vim-json'
-Plugin 'gitignore.vim'
-Plugin 'honza/vim-snippets'
-Plugin 'itchyny/lightline.vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'kien/ctrlp.vim'
-Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'sickill/vim-pasta'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tommcdo/vim-exchange'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-surround'
+NeoBundle '907th/vim-auto-save'
+NeoBundle 'ConradIrwin/vim-bracketed-paste'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'Valloric/YouCompleteMe', {
+\ 'build'      : {
+   \ 'mac'     : './install.sh',
+   \ 'unix'    : './install.sh'
+   \ }
+\ }
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'benmills/vimux'
+NeoBundle 'bogado/file-line'
+NeoBundle 'chrisbra/vim-diff-enhanced'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'gitignore.vim'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'sickill/vim-pasta'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'tommcdo/vim-exchange'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-obsession'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-sensible'
+NeoBundle 'tpope/vim-surround'
 
 " Themes
-Plugin 'sjl/badwolf'
-Plugin 'altercation/vim-colors-solarized'
+NeoBundle 'sjl/badwolf'
+NeoBundle 'altercation/vim-colors-solarized'
 
 " Ruby
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'tpope/vim-endwise'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'jgdavey/vim-turbux'
+NeoBundle 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'jgdavey/vim-turbux'
 
 " Clojure
-Plugin 'amdt/vim-niji'
-Plugin 'tpope/vim-fireplace'
-Plugin 'vim-scripts/paredit.vim'
+NeoBundle 'amdt/vim-niji'
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'vim-scripts/paredit.vim'
 
 " Erlang
-Plugin 'edkolev/erlang-motions.vim'
-Plugin 'jimenezrick/vimerl'
+NeoBundle 'edkolev/erlang-motions.vim'
+NeoBundle 'jimenezrick/vimerl'
 
 " Distraction free writing
-Plugin 'junegunn/goyo.vim'
+NeoBundle 'junegunn/goyo.vim'
 
-call vundle#end()
+" Required:
+call neobundle#end()
+
+" Required:
 filetype plugin indent on
-" }}}
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------
 
 let mapleader="\<Space>"              " Remap the leader from \ to <Space>
 
@@ -188,6 +207,10 @@ set smartcase
 " }}}
 
 " Plugins ------ {{{
+
+" NeoBundle
+let g:neobundle#install_process_timeout = 1500
+
 " Ag
 let g:agprg = 'ag --nogroup --nocolor --column --smart-case'
 cabbrev Agfs AgFromSearch
