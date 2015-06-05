@@ -67,6 +67,11 @@ NeoBundle 'vim-scripts/paredit.vim'
 NeoBundle 'edkolev/erlang-motions.vim'
 NeoBundle 'jimenezrick/vimerl'
 
+" Haskell
+"NeoBundle 'yogsototh/haskell-vim'
+"NeoBundle 'Shougo/vimproc'
+"NeoBundle 'eagletmt/ghcmod-vim'
+
 " Required:
 call neobundle#end()
 
