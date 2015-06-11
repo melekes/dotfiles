@@ -107,8 +107,8 @@ set wildmode=list:longest,list:full
 set wildignore+=.hg,.git,.svn                           " Version control
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg          " Binary images
 set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.pyc  " Compiled object files
-set wildignore+=tags,gems.tags
-set tags+=gems.tags
+set wildignore+=tags
+set tags+=.git/tags
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
 set nojoinspaces                      " Don't add 2 spaces when using J
 set title                             " Change the terminal's title
