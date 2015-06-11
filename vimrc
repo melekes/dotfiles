@@ -18,20 +18,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle '907th/vim-auto-save'
 NeoBundle 'ConradIrwin/vim-bracketed-paste'
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'Valloric/YouCompleteMe', {
-\ 'build'      : {
-   \ 'mac'     : './install.sh',
-   \ 'unix'    : './install.sh'
-   \ }
-\ }
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'benmills/vimux'
 NeoBundle 'bogado/file-line'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'gitignore.vim'
-NeoBundle 'honza/vim-snippets'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kien/ctrlp.vim'
@@ -246,8 +238,6 @@ let g:lightline = {
 let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
 let g:syntastic_erlang_checkers = ['syntaxerl']
 
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<c-e>"
 " }}}
 
 " Local config
