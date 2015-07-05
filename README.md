@@ -46,7 +46,7 @@ Install Vim plugins:
 
 Plus tools that Vim uses:
 
-- https://github.com/ten0s/syntaxerl
+- https://github.com/ten0s/syntaxerl (for Erlang)
 
 Install Tmux plugins: run tmux and hit `Ctrl-f + I`.
 
