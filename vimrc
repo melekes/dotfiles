@@ -17,14 +17,15 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle '907th/vim-auto-save'
 NeoBundle 'ConradIrwin/vim-bracketed-paste'
-NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'benmills/vimux'
 NeoBundle 'bogado/file-line'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'elzr/vim-json'
-NeoBundle 'ervandew/supertab'
 NeoBundle 'gitignore.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kana/vim-textobj-user'
@@ -209,9 +210,9 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 let g:ctrlp_map = '<leader>f'
-map <leader>b :CtrlPBuffer<CR>
-map <leader>r :CtrlPMRU<CR>
-map <leader>hl :CtrlPLastMode<CR>
+nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>r :CtrlPMRU<CR>
+nmap <leader>hl :CtrlPLastMode<CR>
 
 " AutoSave
 let g:auto_save = 1
@@ -222,10 +223,14 @@ let g:auto_save_silent = 1
 let g:vim_json_syntax_conceal = 0
 
 " EasyMotion
-let g:EasyMotion_leader_key = ';'
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes
+nmap <Tab> <Plug>(easymotion-overwin-f)
+let g:EasyMotion_smartcase = 1
 
 " NERDTree
-map <leader>n :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 
 " lightline
 let g:lightline = {
@@ -241,7 +246,7 @@ let g:syntastic_erlang_checkers = ['syntaxerl']
 
 " Ag
 let g:ag_prg = 'ag --nogroup --nocolor --column --smart-case'
-map <leader>/ :Ag
+nmap <leader>/ :Ag
 
 " }}}
 
