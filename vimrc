@@ -58,7 +58,9 @@ NeoBundle 'vim-scripts/paredit.vim'
 
 " Erlang
 NeoBundle 'edkolev/erlang-motions.vim'
-NeoBundle 'jimenezrick/vimerl'
+NeoBundle 'vim-erlang/vim-erlang-runtime'
+NeoBundle 'vim-erlang/vim-erlang-compiler'
+NeoBundle 'akalyaev/vim-erlang-spec'
 
 " Haskell
 "NeoBundle 'yogsototh/haskell-vim'
