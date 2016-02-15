@@ -165,10 +165,6 @@ au vimrc BufNewFile * set noeol
 " Sudo write (,W)
 noremap <leader>W :w !sudo tee %<CR>
 
-" Toggle paste mode
-nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
-imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
-
 " Resize splits when the window is resized
 au vimrc VimResized * :wincmd =
 
