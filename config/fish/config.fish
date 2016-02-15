@@ -21,10 +21,5 @@ if test -e ~/.config/fish/config.fish.local
   source ~/.config/fish/config.fish.local
 end
 
-# https://github.com/nvbn/thefuck
-function fuck
-  eval (thefuck $history[2])
-end
-
 # alias tmux for proper coloring
 alias tmux="env TERM=screen-256color-bce tmux"
