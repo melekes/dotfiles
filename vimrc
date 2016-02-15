@@ -16,6 +16,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle '907th/vim-auto-save'
+NeoBundle 'Chun-Yang/vim-action-ag'
 NeoBundle 'ConradIrwin/vim-bracketed-paste'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'benmills/vimux'
@@ -245,6 +246,10 @@ let g:syntastic_erlang_checkers = ['syntaxerl']
 " Ag
 let g:ag_prg = 'ag --nogroup --nocolor --column --smart-case'
 nmap <leader>/ :Ag
+
+" vim-action-ag
+nmap <leader>s <Plug>AgAction
+vmap <leader>s <Plug>AgActionVisual
 
 " }}}
 
