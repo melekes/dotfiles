@@ -44,8 +44,9 @@ NeoBundle 'tpope/vim-sensible'
 NeoBundle 'tpope/vim-surround'
 
 " Themes
-NeoBundle 'sjl/badwolf'
+" NeoBundle 'sjl/badwolf'
 NeoBundle 'altercation/vim-colors-solarized'
+" NeoBundle 'junegunn/seoul256.vim'
 
 " Ruby
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
