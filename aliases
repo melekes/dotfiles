@@ -21,6 +21,10 @@ alias gs="git stash"
 alias gsp="git stash pop"
 alias gst="git st"
 
+# Unix
+alias mkdir="mkdir -p"
+alias ll="ls -al"
+
 # Include custom aliases
 if test -e ~/.aliases.local
   source ~/.aliases.local
