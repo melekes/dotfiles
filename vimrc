@@ -245,7 +245,7 @@ let g:syntastic_erlang_checkers = ['syntaxerl']
 
 " Ag
 let g:ag_prg = 'ag --nogroup --nocolor --column --smart-case'
-nmap <leader>/ :Ag
+nmap <leader>/ :Ag<Space>
 
 " vim-action-ag
 nmap <leader>s <Plug>AgAction
