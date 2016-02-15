@@ -94,8 +94,10 @@ set expandtab                         " Insert spaces instead of actually tabs
 set tabstop=2                         " Number of spaces each tab counts for
 set softtabstop=2                     " Number of spaces for some tab operations
 set shiftwidth=2                      " The space << and >> moves the lines
+set shiftround
 set smartindent                       " Smart auto-indent when creating a new line
-set colorcolumn=85
+set textwidth=80                      " Make it obvious where 80 characters is
+set colorcolumn=+1
 set synmaxcol=300                     " The max number of columns to try and highlight
 set ttyfast                           " Optimize for fast terminal connections
 set lazyredraw                        " Don't redraw vim in all situations
@@ -118,7 +120,6 @@ set wildignore+=tags
 set tags+=.git/tags
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
 set nojoinspaces                      " Don't add 2 spaces when using J
-set title                             " Change the terminal's title
 
 if has("clipboard")                   " If the feature is available
   set clipboard=unnamed               " copy to the system clipboard
@@ -158,7 +159,7 @@ augroup vimrc
 augroup END
 
 " Better commit message
-au vimrc Filetype gitcommit setlocal spell textwidth=72
+au vimrc Filetype gitcommit setlocal spell
 
 " Spelling
 source ~/.vim-addons/spelling.vim
@@ -173,8 +174,6 @@ au vimrc VimResized * :wincmd =
 
 " Automatically removing all trailing whitespace
 au vimrc BufWritePre * :%s/\s\+$//e
-
-au vimrc BufRead,BufNewFile *.md setlocal textwidth=80
 
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
@@ -204,7 +203,7 @@ set smartcase
 " Plugins ------ {{{
 
 " CtrlP
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
 " ag is fast enough that CtrlP doesn't need to cache
 let g:ctrlp_use_caching = 0
 
