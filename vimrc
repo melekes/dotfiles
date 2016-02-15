@@ -22,11 +22,12 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'benmills/vimux'
 NeoBundle 'bogado/file-line'
 NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'ervandew/supertab'
 NeoBundle 'gitignore.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'scrooloose/nerdtree'
@@ -200,17 +201,15 @@ set smartcase
 
 " Plugins ------ {{{
 
-" NeoBundle
-let g:neobundle#install_process_timeout = 1500
-
-" Ag
-let g:agprg = 'ag --nogroup --nocolor --column --smart-case'
-cabbrev Agfs AgFromSearch
-
 " CtrlP
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 " ag is fast enough that CtrlP doesn't need to cache
 let g:ctrlp_use_caching = 0
+
+let g:ctrlp_map = '<leader>f'
+map <leader>b :CtrlPBuffer<CR>
+map <leader>r :CtrlPMRU<CR>
+map <leader>hl :CtrlPLastMode<CR>
 
 " AutoSave
 let g:auto_save = 1
@@ -224,7 +223,7 @@ let g:vim_json_syntax_conceal = 0
 let g:EasyMotion_leader_key = ';'
 
 " NERDTree
-nmap <leader>n :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " lightline
 let g:lightline = {
@@ -237,6 +236,10 @@ let g:lightline = {
 " Syntastic
 let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
 let g:syntastic_erlang_checkers = ['syntaxerl']
+
+" Ag
+let g:ag_prg = 'ag --nogroup --nocolor --column --smart-case'
+map <leader>/ :Ag
 
 " }}}
 
