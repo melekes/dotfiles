@@ -45,7 +45,6 @@ NeoBundle 'tpope/vim-sensible'
 NeoBundle 'tpope/vim-surround'
 
 " Themes
-" NeoBundle 'sjl/badwolf'
 NeoBundle 'altercation/vim-colors-solarized'
 " NeoBundle 'junegunn/seoul256.vim'
 
@@ -96,8 +95,7 @@ set softtabstop=2                     " Number of spaces for some tab operations
 set shiftwidth=2                      " The space << and >> moves the lines
 set shiftround
 set smartindent                       " Smart auto-indent when creating a new line
-set textwidth=80                      " Make it obvious where 80 characters is
-set colorcolumn=+1
+set colorcolumn=80
 set synmaxcol=300                     " The max number of columns to try and highlight
 set ttyfast                           " Optimize for fast terminal connections
 set lazyredraw                        " Don't redraw vim in all situations
