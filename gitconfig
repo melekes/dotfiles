@@ -28,6 +28,7 @@
 
 [merge]
 	tool = vimdiff
+  ff = only
 
 [mergetool]
   keepBackup = false
@@ -35,6 +36,9 @@
 
 [difftool]
   prompt = false
+
+[fetch]
+  prune = true
 
 [include]
   path = .gitconfig.local
