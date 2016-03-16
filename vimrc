@@ -131,10 +131,13 @@ endif
 inoremap jk <ESC>
 
 " Select entire file
-nnoremap <leader>v ggV`]
+nnoremap <leader>vef ggV`]
 
 " Format entire file
 nmap <leader>fef ggVG=
+
+" find merge conflict markers
+nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
 " Jump to the next row on long lines
 nnoremap j gj
@@ -219,9 +222,7 @@ let g:vim_json_syntax_conceal = 0
 
 " EasyMotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-" Jump to anywhere you want with minimal keystrokes
-nmap <Tab> <Plug>(easymotion-overwin-f)
+nmap <Tab> <Plug>(easymotion-overwin-f) " Jump to anywhere you want with minimal keystrokes
 let g:EasyMotion_smartcase = 1
 
 " NERDTree
