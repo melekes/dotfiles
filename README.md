@@ -7,7 +7,7 @@
 * [tmux](http://robots.thoughtbot.com/a-tmux-crash-course) (prefix is `Ctrl-f`) +
   [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 * [fish](https://github.com/fish-shell/fish-shell) +
-  [Oh My Fish!](https://github.com/bpinto/oh-my-fish)
+  [Fisherman](https://github.com/fisherman/fisherman)
 
 *Be sure, you had these installed before proceeding.*
 
@@ -79,14 +79,11 @@ Your `~/.config/fish/config.fish.local` might look like this:
 
     set PATH $PATH /usr/local/bin
 
+## Shell aliases
 
-Shell aliases and scripts:
-
-* `g` for `git`.
-* `e` for $EDITOR.
-* vagrant aliases (`vup`, `vhl`, `vssh`, etc.).
-* `replace foo bar **/*.rb` to find and replace within a given list of
-  files.
+* `e` for $EDITOR
+* git aliases (`gst`, `gci`, `ga`, etc.)
+* vagrant aliases (`vup`, `vhl`, `vssh`, etc.)
 
 ## Thanks
 
