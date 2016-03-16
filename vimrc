@@ -98,7 +98,6 @@ set smartindent                       " Smart auto-indent when creating a new li
 set colorcolumn=80
 set synmaxcol=300                     " The max number of columns to try and highlight
 set ttyfast                           " Optimize for fast terminal connections
-set lazyredraw                        " Don't redraw vim in all situations
 set encoding=utf-8                    " Set the default encodings just in case $LANG isn't set
 set nowrap                            " Don't wrap lines
 set number                            " Enable line numbers
