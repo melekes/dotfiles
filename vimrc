@@ -55,7 +55,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'jgdavey/vim-turbux'
 
 " Clojure
-NeoBundle 'amdt/vim-niji'
+NeoBundle 'raymond-w-ko/vim-niji'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'vim-scripts/paredit.vim'
 
