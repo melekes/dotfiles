@@ -226,6 +226,7 @@ let g:EasyMotion_smartcase = 1
 
 " NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>j :NERDTreeFind<CR>
 
 " lightline
 let g:lightline = {
@@ -246,6 +247,8 @@ nmap <leader>/ :Ag<Space>
 nmap <leader>s <Plug>AgAction
 vmap <leader>s <Plug>AgActionVisual
 
+" Vimux
+nmap <leader>v <Plug>VimuxRunLastCommand
 " }}}
 
 " Local config
