@@ -32,6 +32,7 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'reedes/vim-lexical'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
@@ -161,9 +162,6 @@ augroup END
 " Better commit message
 au vimrc Filetype gitcommit setlocal spell
 
-" Spelling
-source ~/.vim-addons/spelling.vim
-
 au vimrc BufNewFile * set noeol
 
 " Sudo write (,W)
@@ -250,6 +248,16 @@ vmap <leader>s <Plug>AgActionVisual
 
 " Vimux
 nmap <leader>v <Plug>VimuxRunLastCommand
+
+" vim-lexical
+augroup lexical
+  autocmd!
+  autocmd FileType markdown,mkd call lexical#init()
+  autocmd FileType textile call lexical#init()
+  autocmd FileType text call lexical#init({ 'spell': 0 })
+augroup END
+let g:lexical#spelllang = ['en_us', 'ru_ru']
+
 " }}}
 
 " Local config
