@@ -1,3 +1,5 @@
+fish_vi_mode
+
 set -U EDITOR vim
 
 if test -e ~/.aliases
