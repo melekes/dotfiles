@@ -1,86 +1,76 @@
-"NeoBundle Scripts-----------------------------
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle'))
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle '907th/vim-auto-save'
-NeoBundle 'Chun-Yang/vim-action-ag'
-NeoBundle 'ConradIrwin/vim-bracketed-paste'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'benmills/vimux'
-NeoBundle 'bogado/file-line'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'easymotion/vim-easymotion'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'ekalinin/Dockerfile.vim'
-NeoBundle 'elzr/vim-json'
-NeoBundle 'gitignore.vim'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'mhinz/vim-startify'
-NeoBundle 'nelstrom/vim-visual-star-search'
-NeoBundle 'reedes/vim-lexical'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'sickill/vim-pasta'
-NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'tommcdo/vim-exchange'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-obsession'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-sensible'
-NeoBundle 'tpope/vim-surround'
+Plugin '907th/vim-auto-save'
+Plugin 'Chun-Yang/vim-action-ag'
+Plugin 'ConradIrwin/vim-bracketed-paste'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'benmills/vimux'
+Plugin 'bogado/file-line'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'elzr/vim-json'
+Plugin 'gitignore.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'kana/vim-textobj-user'
+Plugin 'mhinz/vim-startify'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'reedes/vim-lexical'
+Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'sickill/vim-pasta'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tommcdo/vim-exchange'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
 
 " Themes
-NeoBundle 'altercation/vim-colors-solarized'
-" NeoBundle 'junegunn/seoul256.vim'
+Plugin 'altercation/vim-colors-solarized'
+" Plugin 'junegunn/seoul256.vim'
 
 " Ruby
-NeoBundle 'nelstrom/vim-textobj-rubyblock'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'jgdavey/vim-turbux'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tpope/vim-endwise'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'jgdavey/vim-turbux'
 
 " Clojure
-NeoBundle 'raymond-w-ko/vim-niji'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'vim-scripts/paredit.vim'
+Plugin 'raymond-w-ko/vim-niji'
+Plugin 'tpope/vim-fireplace'
+Plugin 'vim-scripts/paredit.vim'
 
 " Erlang
-NeoBundle 'edkolev/erlang-motions.vim'
-NeoBundle 'vim-erlang/vim-erlang-runtime'
-NeoBundle 'vim-erlang/vim-erlang-compiler'
-NeoBundle 'akalyaev/vim-erlang-spec'
+Plugin 'edkolev/erlang-motions.vim'
+Plugin 'vim-erlang/vim-erlang-runtime'
+Plugin 'vim-erlang/vim-erlang-compiler'
+Plugin 'akalyaev/vim-erlang-spec'
 
 " Haskell
-"NeoBundle 'yogsototh/haskell-vim'
-"NeoBundle 'Shougo/vimproc'
-"NeoBundle 'eagletmt/ghcmod-vim'
+"Plugin 'yogsototh/haskell-vim'
+"Plugin 'Shougo/vimproc'
+"Plugin 'eagletmt/ghcmod-vim'
 
-" Required:
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
 
 let mapleader="\<Space>"              " Remap the leader from \ to <Space>
 

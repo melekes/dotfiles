@@ -3,7 +3,7 @@
 ## What I am using
 
 * [vim](http://www.vim.org/) +
-  [NeoBundle](https://github.com/Shougo/neobundle.vim)
+  [Vundle](https://github.com/VundleVim/Vundle.vim)
 * [tmux](http://robots.thoughtbot.com/a-tmux-crash-course) (prefix is `Ctrl-f`) +
   [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 * [fish](https://github.com/fish-shell/fish-shell) +
@@ -42,7 +42,7 @@ You can safely run `rcup` multiple times to update:
 
 Install Vim plugins:
 
-    vim +NeoBundleInstall +qall
+    vim +PluginInstall +qall
 
 Plus tools that Vim uses:
 
