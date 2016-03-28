@@ -210,7 +210,8 @@ let g:vim_json_syntax_conceal = 0
 
 " EasyMotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
-nmap <Tab> <Plug>(easymotion-overwin-f) " Jump to anywhere you want with minimal keystrokes
+map  <Tab> <Plug>(easymotion-bd-f)
+nmap <Tab> <Plug>(easymotion-overwin-f)
 let g:EasyMotion_smartcase = 1
 
 " NERDTree
