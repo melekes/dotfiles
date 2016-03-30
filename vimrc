@@ -18,6 +18,7 @@ Plugin 'benmills/vimux'
 Plugin 'bogado/file-line'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'dyng/ctrlsf.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ekalinin/Dockerfile.vim'
@@ -248,6 +249,10 @@ augroup lexical
   autocmd FileType text call lexical#init({ 'spell': 0 })
 augroup END
 let g:lexical#spelllang = ['en_us', 'ru_ru']
+
+" ctrlsf.vim
+nmap <leader>sf <Plug>CtrlSFPrompt
+vmap <leader>sf <Plug>CtrlSFVwordExec
 
 " }}}
 
