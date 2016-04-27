@@ -54,8 +54,8 @@ Plug 'jgdavey/vim-turbux'
 
 " Erlang
 Plug 'edkolev/erlang-motions.vim'
-Plug 'vim-erlang/vim-erlang-runtime'
-Plug 'vim-erlang/vim-erlang-compiler'
+" Plug 'vim-erlang/vim-erlang-runtime'
+" Plug 'vim-erlang/vim-erlang-compiler'
 Plug 'akalyaev/vim-erlang-spec'
 
 " Haskell
