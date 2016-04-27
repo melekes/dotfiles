@@ -225,7 +225,7 @@ nmap <leader>f :Files<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>r :History<CR>
 nmap <leader>gf :GitFiles<CR>
-nmap <leader>/ :Ag<Space>
+nmap <leader>/ :Ag <C-R><C-W><CR>
 
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
