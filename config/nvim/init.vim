@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-Plug '907th/vim-auto-save'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'airblade/vim-gitgutter'
@@ -163,11 +162,6 @@ set smartcase
 
 " Plugins ------ {{{
 
-" AutoSave
-let g:auto_save = 0
-" let g:auto_save_in_insert_mode = 0
-" let g:auto_save_silent = 1
-
 " Vim-Json
 let g:vim_json_syntax_conceal = 0
 
@@ -254,6 +248,9 @@ function! s:fzf_statusline()
 endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
+
+" Vim Tmux Navigator
+let g:tmux_navigator_save_on_switch = 1
 
 " }}}
 
