@@ -1,6 +1,3 @@
-set nocompatible                      " be iMproved, required
-filetype off                          " required
-
 call plug#begin('~/.vim/plugged')
 
 Plug '907th/vim-auto-save'
@@ -62,8 +59,6 @@ Plug 'akalyaev/vim-erlang-spec'
 
 " Add plugins to &runtimepath
 call plug#end()
-
-filetype plugin indent on             " required
 
 let mapleader="\<Space>"              " Remap the leader from \ to <Space>
 
