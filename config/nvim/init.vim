@@ -122,7 +122,7 @@ vnoremap L g_
 nnoremap <leader><leader> <C-^>
 
 " http://felixge.de/2013/08/08/vim-trick-open-current-line-on-github.html
-nnoremap <leader>ou :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs chromium-browser<CR><CR>
+nnoremap <leader>ou :!echo `git url`/%?at=refs\%2Fheads\%2F`git rev-parse --abbrev-ref HEAD`\#<C-R>=shellescape(line('.'))<CR> \| xargs open<CR><CR>
 
 augroup vimrc
   autocmd!
