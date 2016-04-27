@@ -12,7 +12,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'elzr/vim-json'
+Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'gitignore.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
@@ -40,23 +40,23 @@ Plug 'altercation/vim-colors-solarized'
 " Plug 'junegunn/seoul256.vim'
 
 " Ruby
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'tpope/vim-endwise'
-Plug 'vim-ruby/vim-ruby'
+Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
+Plug 'tpope/vim-endwise', { 'for': 'ruby' }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 " Clojure
-" Plug 'raymond-w-ko/vim-niji'
-" Plug 'tpope/vim-fireplace'
-" Plug 'vim-scripts/paredit.vim'
+Plug 'raymond-w-ko/vim-niji', { 'for': 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 
 " Erlang
-Plug 'edkolev/erlang-motions.vim'
-Plug 'akalyaev/vim-erlang-spec'
+Plug 'edkolev/erlang-motions.vim', { 'for': 'erlang' }
+Plug 'akalyaev/vim-erlang-spec', { 'for': 'erlang' }
 
 " Haskell
-"Plug 'yogsototh/haskell-vim'
-"Plug 'Shougo/vimproc'
-"Plug 'eagletmt/ghcmod-vim'
+Plug 'yogsototh/haskell-vim', { 'for': 'haskell' }
+Plug 'Shougo/vimproc', { 'for': 'haskell' }
+Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 
 " Add plugins to &runtimepath
 call plug#end()
