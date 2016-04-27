@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug '907th/vim-auto-save'
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'airblade/vim-gitgutter'
 Plug 'benekastah/neomake'
@@ -32,6 +33,7 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'vim-scripts/ReplaceWithRegister'
 
 " Themes
 Plug 'altercation/vim-colors-solarized'
