@@ -45,7 +45,6 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-endwise'
 Plug 'vim-ruby/vim-ruby'
-Plug 'jgdavey/vim-turbux'
 
 " Clojure
 " Plug 'raymond-w-ko/vim-niji'
