@@ -147,10 +147,6 @@ au vimrc VimResized * :wincmd =
 " Automatically removing all trailing whitespace
 au vimrc BufWritePre * :%s/\s\+$//e
 
-vnoremap <silent> y y`]
-vnoremap <silent> p p`]
-nnoremap <silent> p p`]
-
 " }}}
 
 " Windows And Splits ------ {{{
