@@ -1,14 +1,12 @@
 call plug#begin('~/.vim/plugged')
 
 Plug '907th/vim-auto-save'
-Plug 'Chun-Yang/vim-action-ag'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'airblade/vim-gitgutter'
 Plug 'benekastah/neomake'
 Plug 'benmills/vimux'
 Plug 'bogado/file-line'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
@@ -18,11 +16,12 @@ Plug 'gitignore.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
-Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'sickill/vim-pasta'
@@ -164,16 +163,6 @@ set smartcase
 
 " Plugins ------ {{{
 
-" CtrlP
-let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-" ag is fast enough that CtrlP doesn't need to cache
-let g:ctrlp_use_caching = 0
-
-let g:ctrlp_map = '<leader>f'
-nmap <leader>b :CtrlPBuffer<CR>
-nmap <leader>r :CtrlPMRU<CR>
-nmap <leader>hl :CtrlPLastMode<CR>
-
 " AutoSave
 let g:auto_save = 0
 " let g:auto_save_in_insert_mode = 0
@@ -202,10 +191,6 @@ let g:lightline = {
 
 " Syntastic
 let g:syntastic_erlang_checkers = ['syntaxerl']
-
-" Ag
-let g:ag_prg = 'ag --nogroup --nocolor --column --smart-case'
-nmap <leader>/ :Ag<Space>
 
 " vim-action-ag
 nmap <leader>s <Plug>AgAction
@@ -241,6 +226,35 @@ autocmd! BufWritePost * Neomake
 let g:neomake_erlang_erlc_maker = {
       \ 'args': ['-I src/records']
       \ }
+
+" fzf :heart: vim
+nmap <leader>f :Files<CR>
+nmap <leader>b :Buffers<CR>
+nmap <leader>r :History<CR>
+nmap <leader>gf :GitFiles<CR>
+nmap <leader>/ :Ag<Space>
+
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+function! s:fzf_statusline()
+  " Override statusline as you like
+  highlight fzf1 ctermfg=161 ctermbg=251
+  highlight fzf2 ctermfg=23 ctermbg=251
+  highlight fzf3 ctermfg=237 ctermbg=251
+  setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
+endfunction
+
+autocmd! User FzfStatusLine call <SID>fzf_statusline()
+
 " }}}
 
 " Local config
