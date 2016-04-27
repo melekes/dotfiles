@@ -101,6 +101,9 @@ set clipboard+=unnamedplus
 " Quick ESC
 inoremap jk <ESC>
 
+" Save
+nnoremap <leader>s :update<cr>
+
 " Select entire file
 nnoremap <leader>vef ggV`]
 
@@ -185,10 +188,6 @@ let g:lightline = {
 
 " Syntastic
 let g:syntastic_erlang_checkers = ['syntaxerl']
-
-" vim-action-ag
-nmap <leader>s <Plug>AgAction
-vmap <leader>s <Plug>AgActionVisual
 
 " Vimux
 nmap <leader>v <Plug>VimuxRunLastCommand
