@@ -196,7 +196,7 @@ let g:EasyMotion_smartcase = 1
 
 " NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>j :NERDTreeFind<CR>
+nmap <leader>nf :NERDTreeFind<CR>
 
 " lightline
 let g:lightline = {
