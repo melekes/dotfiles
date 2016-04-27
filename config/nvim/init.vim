@@ -118,10 +118,6 @@ nmap <leader>fef ggVG=
 " find merge conflict markers
 nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
-" Jump to the next row on long lines
-nnoremap j gj
-nnoremap k gk
-
 nnoremap H ^
 vnoremap H ^
 nnoremap L g_
