@@ -1,78 +1,72 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible                      " be iMproved, required
+filetype off                          " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin '907th/vim-auto-save'
-Plugin 'Chun-Yang/vim-action-ag'
-Plugin 'ConradIrwin/vim-bracketed-paste'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'benmills/vimux'
-Plugin 'bogado/file-line'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'dyng/ctrlsf.vim'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'elzr/vim-json'
-Plugin 'gitignore.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'kana/vim-textobj-user'
-Plugin 'mhinz/vim-startify'
-Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'reedes/vim-lexical'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'sickill/vim-pasta'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tommcdo/vim-exchange'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-surround'
+Plug '907th/vim-auto-save'
+Plug 'Chun-Yang/vim-action-ag'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'airblade/vim-gitgutter'
+Plug 'benekastah/neomake'
+Plug 'benmills/vimux'
+Plug 'bogado/file-line'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dyng/ctrlsf.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'elzr/vim-json'
+Plug 'gitignore.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'janko-m/vim-test'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kana/vim-textobj-user'
+Plug 'mhinz/vim-startify'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'reedes/vim-lexical'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'sickill/vim-pasta'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tommcdo/vim-exchange'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
 
 " Themes
-Plugin 'altercation/vim-colors-solarized'
-" Plugin 'junegunn/seoul256.vim'
+Plug 'altercation/vim-colors-solarized'
+" Plug 'junegunn/seoul256.vim'
 
 " Ruby
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'tpope/vim-endwise'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'jgdavey/vim-turbux'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'tpope/vim-endwise'
+Plug 'vim-ruby/vim-ruby'
+Plug 'jgdavey/vim-turbux'
 
 " Clojure
-Plugin 'raymond-w-ko/vim-niji'
-Plugin 'tpope/vim-fireplace'
-Plugin 'vim-scripts/paredit.vim'
+" Plug 'raymond-w-ko/vim-niji'
+" Plug 'tpope/vim-fireplace'
+" Plug 'vim-scripts/paredit.vim'
 
 " Erlang
-Plugin 'edkolev/erlang-motions.vim'
-Plugin 'vim-erlang/vim-erlang-runtime'
-Plugin 'vim-erlang/vim-erlang-compiler'
-Plugin 'akalyaev/vim-erlang-spec'
+Plug 'edkolev/erlang-motions.vim'
+Plug 'vim-erlang/vim-erlang-runtime'
+Plug 'vim-erlang/vim-erlang-compiler'
+Plug 'akalyaev/vim-erlang-spec'
 
 " Haskell
-"Plugin 'yogsototh/haskell-vim'
-"Plugin 'Shougo/vimproc'
-"Plugin 'eagletmt/ghcmod-vim'
+"Plug 'yogsototh/haskell-vim'
+"Plug 'Shougo/vimproc'
+"Plug 'eagletmt/ghcmod-vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+" Add plugins to &runtimepath
+call plug#end()
+
+filetype plugin indent on             " required
 
 let mapleader="\<Space>"              " Remap the leader from \ to <Space>
 
@@ -111,13 +105,7 @@ set tags+=.git/tags
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
 set nojoinspaces                      " Don't add 2 spaces when using J
 
-if has("clipboard")                   " If the feature is available
-  set clipboard=unnamed               " copy to the system clipboard
-
-  if has("unnamedplus")
-    set clipboard+=unnamedplus
-  endif
-endif
+set clipboard+=unnamedplus
 
 " Custom Mappings ------ {{{
 " Quick ESC
@@ -203,9 +191,9 @@ nmap <leader>r :CtrlPMRU<CR>
 nmap <leader>hl :CtrlPLastMode<CR>
 
 " AutoSave
-let g:auto_save = 1
-let g:auto_save_in_insert_mode = 0
-let g:auto_save_silent = 1
+let g:auto_save = 0
+" let g:auto_save_in_insert_mode = 0
+" let g:auto_save_silent = 1
 
 " Vim-Json
 let g:vim_json_syntax_conceal = 0
@@ -255,9 +243,16 @@ let g:lexical#spelllang = ['en_us', 'ru_ru']
 nmap <leader>sf <Plug>CtrlSFPrompt
 vmap <leader>sf <Plug>CtrlSFVwordExec
 
+" vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>ts :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tv :TestVisit<CR>
+let test#strategy = "vimux"
 " }}}
 
 " Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
+if filereadable($HOME . "/.config/nvim/init.vim.local")
+  source ~/.config/nvim/init.vim.local
 endif

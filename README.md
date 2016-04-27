@@ -2,8 +2,8 @@
 
 ## What I am using
 
-* [vim](http://www.vim.org/) +
-  [Vundle](https://github.com/VundleVim/Vundle.vim)
+* [neovim](https://neovim.io/) +
+  [vim-plug](https://github.com/junegunn/vim-plug)
 * [tmux](http://robots.thoughtbot.com/a-tmux-crash-course) (prefix is `Ctrl-f`) +
   [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 * [fish](https://github.com/fish-shell/fish-shell) +
@@ -42,7 +42,7 @@ You can safely run `rcup` multiple times to update:
 
 Install Vim plugins:
 
-    vim +PluginInstall +qall
+    vim +PlugInstall +qall
 
 Plus tools that Vim uses:
 
@@ -58,7 +58,7 @@ Put your customizations in dotfiles appended with `.local`:
 * `~/.gitconfig.local`
 * `~/.tmux.conf.local`
 * `~/.config/fish/config.fish.local`
-* `~/.vimrc.local`
+* `~/.config/nvim/init.vim.local`
 
 For example, your `~/.aliases.local` might look like this:
 
