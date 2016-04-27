@@ -61,7 +61,8 @@ Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 " Add plugins to &runtimepath
 call plug#end()
 
-let mapleader="\<Space>"              " Remap the leader from \ to <Space>
+let mapleader      = ' '
+let maplocalleader = ' '
 
 syntax enable
 set background=light
@@ -87,13 +88,10 @@ set noswapfile                        " Don't write swap files
 set nobackup                          " Don't keep backup files
 set hidden
 set scrolloff=5                       " Lines the cursor is to the edge before scrolling
-set complete=.,w,b,u,t
+set complete-=i                       " set complete=.,w,b,u,t
 set completeopt=menu,preview
-set wildmode=list:longest,list:full
-set wildignore+=.hg,.git,.svn                           " Version control
-set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg          " Binary images
-set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.pyc  " Compiled object files
-set wildignore+=tags
+set wildmenu
+set wildmode=full
 set tags+=.git/tags
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
 set nojoinspaces                      " Don't add 2 spaces when using J
