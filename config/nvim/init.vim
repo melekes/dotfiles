@@ -54,8 +54,6 @@ Plug 'jgdavey/vim-turbux'
 
 " Erlang
 Plug 'edkolev/erlang-motions.vim'
-" Plug 'vim-erlang/vim-erlang-runtime'
-" Plug 'vim-erlang/vim-erlang-compiler'
 Plug 'akalyaev/vim-erlang-spec'
 
 " Haskell
@@ -250,6 +248,13 @@ nmap <silent> <leader>ts :TestSuite<CR>
 nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tv :TestVisit<CR>
 let test#strategy = "vimux"
+
+" Neomake
+autocmd! BufWritePost * Neomake
+
+let g:neomake_erlang_erlc_maker = {
+      \ 'args': ['-I src/records']
+      \ }
 " }}}
 
 " Local config
