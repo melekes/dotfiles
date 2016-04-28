@@ -122,8 +122,8 @@ vnoremap L g_
 " Switch between last two buffers
 nnoremap <leader><leader> <C-^>
 
-" http://felixge.de/2013/08/08/vim-trick-open-current-line-on-github.html
-nnoremap <leader>ou :!echo `git url`/%?at=refs\%2Fheads\%2F`git rev-parse --abbrev-ref HEAD`\#<C-R>=shellescape(line('.'))<CR> \| xargs open<CR><CR>
+" Open current line on Stash
+nnoremap <leader>ou :!echo `git url`/%?at=`git rev-parse HEAD`\#<C-R>=line('.')<CR> \| xargs open<CR><CR>
 
 augroup vimrc
   autocmd!
