@@ -40,9 +40,7 @@ You can safely run `rcup` multiple times to update:
 
 ## After steps
 
-Install Vim plugins:
-
-    vim +PlugInstall +qall
+Install Vim plugins: open Vim and type `:PlugInstall`.
 
 Plus tools that Vim uses:
 
