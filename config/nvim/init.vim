@@ -23,7 +23,6 @@ Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'sickill/vim-pasta'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tommcdo/vim-exchange'
@@ -186,9 +185,6 @@ let g:lightline = {
     \              [ 'percent' ] ]
     \ }
     \ }
-
-" Syntastic
-let g:syntastic_erlang_checkers = ['syntaxerl']
 
 " Vimux
 nmap <leader>v <Plug>VimuxRunLastCommand

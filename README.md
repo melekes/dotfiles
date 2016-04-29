@@ -42,10 +42,6 @@ You can safely run `rcup` multiple times to update:
 
 Install Vim plugins: open Vim and type `:PlugInstall`.
 
-Plus tools that Vim uses:
-
-- https://github.com/ten0s/syntaxerl (for Erlang)
-
 Install Tmux plugins: run tmux and hit `Ctrl-f + I`.
 
 ## Make your own customizations
