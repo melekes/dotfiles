@@ -142,6 +142,8 @@ au vimrc VimResized * :wincmd =
 " Automatically removing all trailing whitespace
 au vimrc BufWritePre * :%s/\s\+$//e
 
+au vimrc Filetype erlang setlocal tabstop=4 softtabstop=4 shiftwidth=4
+
 " }}}
 
 " Windows And Splits ------ {{{
