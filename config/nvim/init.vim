@@ -1,3 +1,5 @@
+filetype off                          " required
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/sideways.vim', { 'on': ['SidewaysLeft', 'SidewaysRight'] }
@@ -55,12 +57,14 @@ Plug 'vim-erlang/vim-erlang-runtime', { 'for': 'erlang' }
 Plug 'akalyaev/vim-erlang-spec', { 'for': 'erlang' }
 
 " Haskell
-Plug 'yogsototh/haskell-vim', { 'for': 'haskell' }
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'Shougo/vimproc', { 'for': 'haskell' }
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 
 " Add plugins to &runtimepath
 call plug#end()
+
+filetype plugin indent on             " required
 
 let mapleader      = ' '
 let maplocalleader = ' '
