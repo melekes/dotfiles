@@ -35,8 +35,9 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
 
 " Themes
-Plug 'altercation/vim-colors-solarized'
-" Plug 'junegunn/seoul256.vim'
+" Plug 'altercation/vim-colors-solarized'
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
+" Plug 'morhetz/gruvbox'
 
 " Ruby
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
@@ -64,6 +65,7 @@ call plug#end()
 let mapleader      = ' '
 let maplocalleader = ' '
 
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax enable
 set background=light
 colorscheme solarized
