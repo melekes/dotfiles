@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'AndrewRadev/sideways.vim', { 'on': ['SidewaysLeft', 'SidewaysRight'] }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'airblade/vim-gitgutter'
@@ -22,7 +23,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tommcdo/vim-exchange'
@@ -249,6 +250,10 @@ autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
 " Vim Tmux Navigator
 let g:tmux_navigator_save_on_switch = 1
+
+" Sideways
+nmap <leader>l :SidewaysLeft<CR>
+nmap <leader>h :SidewaysRight<CR>
 
 " }}}
 
