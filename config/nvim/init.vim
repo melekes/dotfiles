@@ -227,6 +227,9 @@ let g:neomake_erlang_erlc_maker = {
       \ }
 
 " fzf :heart: vim
+" See https://github.com/junegunn/fzf#respecting-gitignore-hgignore-and-svnignore
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
 nmap <leader>f :Files<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>r :History<CR>
