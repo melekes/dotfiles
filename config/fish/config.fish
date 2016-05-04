@@ -7,7 +7,7 @@ if test -e ~/.aliases
 end
 
 # alias tmux for proper coloring
-alias tmux="env TERM=screen-256color-bce tmux"
+alias tmux="env TERM=xterm-256color tmux"
 
 set fisher_home ~/.local/share/fisherman
 set fisher_config ~/.config/fisherman
