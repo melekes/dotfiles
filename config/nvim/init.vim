@@ -71,7 +71,7 @@ let maplocalleader = ' '
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 set shell=/bin/bash                   " required for Vim to work inside Fish shell
