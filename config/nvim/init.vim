@@ -68,7 +68,6 @@ call plug#end()
 filetype plugin indent on             " required
 
 let mapleader      = ' '
-let maplocalleader = ' '
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax enable
@@ -115,6 +114,9 @@ nnoremap <leader>s :update<cr>
 
 " Select entire file
 nnoremap <leader>vef ggV`]
+
+" Select text you just pasted
+noremap gV `[v`]
 
 " Format entire file
 nmap <leader>fef ggVG=
@@ -273,6 +275,17 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " }}}
+
+" vp doesn't replace paste buffer
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+vmap <silent> <expr> p <sid>Repl()
 
 " Local config
 if filereadable($HOME . "/.config/nvim/init.vim.local")
