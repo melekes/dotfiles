@@ -112,6 +112,9 @@ inoremap jk <ESC>
 " Save
 nnoremap <leader>s :update<cr>
 
+" Quit
+nnoremap <leader>q :quit<cr>
+
 " Select entire file
 nnoremap <leader>vef ggV`]
 
@@ -144,8 +147,8 @@ au vimrc Filetype gitcommit setlocal spell
 
 au vimrc BufNewFile * set noeol
 
-" Sudo write (,W)
-noremap <leader>W :w !sudo tee %<CR>
+" Sudo write
+noremap <leader>S :w !sudo tee %<CR>
 
 " Resize splits when the window is resized
 au vimrc VimResized * :wincmd =
