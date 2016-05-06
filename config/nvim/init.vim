@@ -102,6 +102,7 @@ set wildmode=full
 set tags+=.git/tags
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
 set nojoinspaces                      " Don't add 2 spaces when using J
+set autowriteall                      " Write the contents of the file as frequent as possible
 
 set clipboard+=unnamedplus
 
