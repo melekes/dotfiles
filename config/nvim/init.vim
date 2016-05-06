@@ -21,6 +21,7 @@ Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'kana/vim-textobj-user'
 Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
@@ -263,6 +264,12 @@ let g:tmux_navigator_save_on_switch = 1
 " Sideways
 nmap <leader>l :SidewaysLeft<CR>
 nmap <leader>h :SidewaysRight<CR>
+
+" vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " }}}
 
