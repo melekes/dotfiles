@@ -42,25 +42,24 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
 " Plug 'morhetz/gruvbox'
 
-" Ruby
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
-Plug 'tpope/vim-endwise', { 'for': 'ruby' }
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'tpope/vim-endwise',              { 'for': 'ruby' }
+Plug 'vim-ruby/vim-ruby',              { 'for': 'ruby' }
 
-" Clojure
-Plug 'raymond-w-ko/vim-niji', { 'for': 'clojure' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-highlight',   { 'for': 'clojure' }
+Plug 'guns/vim-clojure-static',      { 'for': 'clojure' }
+Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure', 'on': ['RainbowParenthesesToggle', 'RainbowParenthesesLoadRound', 'RainbowParenthesesLoadSquare', 'RainbowParenthesesLoadBraces'] }
+Plug 'tpope/vim-fireplace',          { 'for': 'clojure' }
+Plug 'vim-scripts/paredit.vim',      { 'for': 'clojure' }
+" Plug 'venantius/vim-cljfmt',         { 'for': 'clojure' }
 
-" Erlang
-Plug 'edkolev/erlang-motions.vim', { 'for': 'erlang' }
+Plug 'akalyaev/vim-erlang-spec',      { 'for': 'erlang' }
+Plug 'edkolev/erlang-motions.vim',    { 'for': 'erlang' }
 Plug 'vim-erlang/vim-erlang-runtime', { 'for': 'erlang' }
-Plug 'akalyaev/vim-erlang-spec', { 'for': 'erlang' }
 
-" Haskell
+Plug 'Shougo/vimproc',            { 'for': 'haskell' }
+Plug 'eagletmt/ghcmod-vim',       { 'for': 'haskell' }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-Plug 'Shougo/vimproc', { 'for': 'haskell' }
-Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -276,6 +275,12 @@ nmap <leader>h :SidewaysRight<CR>
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" vim-clojure-highlight
+au VimEnter *       RainbowParenthesesToggle
+au Syntax   clojure RainbowParenthesesLoadRound
+au Syntax   clojure RainbowParenthesesLoadSquare
+au Syntax   clojure RainbowParenthesesLoadBraces
 
 " }}}
 
