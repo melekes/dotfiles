@@ -46,12 +46,11 @@ Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 Plug 'tpope/vim-endwise',              { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby',              { 'for': 'ruby' }
 
-Plug 'guns/vim-clojure-highlight',   { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static',      { 'for': 'clojure' }
 Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure', 'on': ['RainbowParenthesesToggle', 'RainbowParenthesesLoadRound', 'RainbowParenthesesLoadSquare', 'RainbowParenthesesLoadBraces'] }
 Plug 'tpope/vim-fireplace',          { 'for': 'clojure' }
 Plug 'vim-scripts/paredit.vim',      { 'for': 'clojure' }
-" Plug 'venantius/vim-cljfmt',         { 'for': 'clojure' }
+Plug 'venantius/vim-cljfmt',         { 'for': 'clojure' }
 
 Plug 'akalyaev/vim-erlang-spec',      { 'for': 'erlang' }
 Plug 'edkolev/erlang-motions.vim',    { 'for': 'erlang' }
