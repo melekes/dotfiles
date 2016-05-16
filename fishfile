@@ -1,6 +1,7 @@
-spin
-debug
-z
-https://github.com/oh-my-fish/theme-l
-https://github.com/jcouyang/plugin-export
-https://github.com/wk/pkg-ssh-term-helper
+fisherman/debug
+jcouyang/plugin-export
+fisherman/getopts
+oh-my-fish/theme-l
+wk/pkg-ssh-term-helper
+fisherman/spin
+fisherman/z
