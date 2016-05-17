@@ -1,6 +1,7 @@
 fish_vi_mode
 
-set -U EDITOR nvim
+set -x VISUAL nvim
+set -x EDITOR $VISUAL
 
 if test -e ~/.aliases
   source ~/.aliases
