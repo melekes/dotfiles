@@ -81,6 +81,6 @@ Your `~/.config/fish/config.fish.local` might look like this:
 
 ## Thanks
 
-These dotfiles is heavily inspired by [holman does
+These dotfiles are heavily inspired by [holman does
 dotfiles](https://github.com/holman/dotfiles). Installation process is
 now handled by awesome [thougtbot/rcm](https://github.com/thoughtbot/rcm).
