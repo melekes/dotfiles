@@ -60,6 +60,8 @@ Plug 'Shougo/vimproc',            { 'for': 'haskell' }
 Plug 'eagletmt/ghcmod-vim',       { 'for': 'haskell' }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+
 " Add plugins to &runtimepath
 call plug#end()
 
