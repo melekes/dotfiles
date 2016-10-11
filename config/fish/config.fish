@@ -1,4 +1,4 @@
-fish_vi_mode
+fish_vi_key_bindings
 
 set -x VISUAL nvim
 set -x EDITOR $VISUAL
