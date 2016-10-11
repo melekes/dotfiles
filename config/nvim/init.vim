@@ -62,6 +62,8 @@ Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+
 " Add plugins to &runtimepath
 call plug#end()
 
