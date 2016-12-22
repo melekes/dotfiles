@@ -64,6 +64,8 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
+Plug 'fatih/vim-go', { 'for': 'go' }
+
 " Add plugins to &runtimepath
 call plug#end()
 
