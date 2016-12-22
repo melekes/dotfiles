@@ -162,6 +162,10 @@ au vimrc BufWritePre * :%s/\s\+$//e
 
 au vimrc Filetype erlang setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
+" Move selected block up/down in Visual block mode
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " }}}
 
 " Windows And Splits ------ {{{
