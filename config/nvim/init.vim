@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'AndrewRadev/sideways.vim', { 'on': ['SidewaysLeft', 'SidewaysRight'] }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'FooSoft/vim-argwrap'
 Plug 'airblade/vim-gitgutter'
 Plug 'benekastah/neomake'
 Plug 'benmills/vimux'
@@ -286,6 +287,9 @@ au VimEnter *       RainbowParenthesesToggle
 au Syntax   clojure RainbowParenthesesLoadRound
 au Syntax   clojure RainbowParenthesesLoadSquare
 au Syntax   clojure RainbowParenthesesLoadBraces
+
+" ArgWrap
+nnoremap <silent> <leader>w :ArgWrap<CR>
 
 " }}}
 
