@@ -73,7 +73,10 @@ filetype plugin indent on             " required
 
 let mapleader      = ' '
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+if has("termguicolors")
+  set termguicolors
+endif
+
 syntax enable
 set background=dark
 colorscheme solarized
