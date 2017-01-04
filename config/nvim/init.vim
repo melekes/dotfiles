@@ -37,6 +37,10 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
 
+" Distraction free writing
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
 " Themes
 " Plug 'altercation/vim-colors-solarized'
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
@@ -292,6 +296,13 @@ au Syntax   clojure RainbowParenthesesLoadBraces
 
 " ArgWrap
 nnoremap <silent> <leader>w :ArgWrap<CR>
+
+" limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 " }}}
 
