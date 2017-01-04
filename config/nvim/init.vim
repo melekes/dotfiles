@@ -6,6 +6,8 @@ Plug 'AndrewRadev/sideways.vim', { 'on': ['SidewaysLeft', 'SidewaysRight'] }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'FooSoft/vim-argwrap'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/echodoc.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'benekastah/neomake'
 Plug 'benmills/vimux'
