@@ -103,7 +103,6 @@ set ttyfast                           " Optimize for fast terminal connections
 set encoding=utf-8                    " Set the default encodings just in case $LANG isn't set
 set nowrap                            " Don't wrap lines
 set number                            " Enable line numbers
-set relativenumber
 set nowritebackup                     " Don't create a backup when overwriting a file
 set noswapfile                        " Don't write swap files
 set nobackup                          " Don't keep backup files
@@ -302,7 +301,7 @@ au Syntax   clojure RainbowParenthesesLoadSquare
 au Syntax   clojure RainbowParenthesesLoadBraces
 
 " ArgWrap
-nnoremap <silent> <leader>w :ArgWrap<CR>
+nmap <silent> <leader>w :ArgWrap<CR>
 
 " limelight
 autocmd! User GoyoEnter Limelight
