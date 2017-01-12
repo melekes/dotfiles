@@ -12,7 +12,7 @@
   undo = reset --soft HEAD^
   ls = log --pretty=format':%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
   graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-  url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+\\.ru\\\\/\\(.+\\)\\\\/\\(.+\\)\\.git$/https:\\\\/\\\\/stash\\\\.fun-box\\\\.ru\\\\/projects\\\\/\\\\1\\\\/repos\\\\/\\\\2\\\\/browse/g"'
+  url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
   ltag =! bash -c 'git tag -l | sort -V | tail -1'
   lp = log -p
 

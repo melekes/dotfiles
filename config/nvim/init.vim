@@ -151,7 +151,10 @@ vnoremap L g_
 nnoremap <leader><leader> <C-^>
 
 " Open current line on Stash
-nnoremap <leader>ou :!echo `git url`/%?at=`git rev-parse HEAD`\#<C-R>=line('.')<CR> \| xargs open<CR><CR>
+" nnoremap <leader>ou :!echo `git url`/%?at=`git rev-parse HEAD`\#<C-R>=line('.')<CR> \| xargs open<CR><CR>
+
+" Open current line on Github
+nnoremap <leader>ou :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs open<CR><CR>
 
 augroup vimrc
   autocmd!
