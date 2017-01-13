@@ -48,3 +48,7 @@
 
 [init]
 	templatedir = ~/.git_template
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
