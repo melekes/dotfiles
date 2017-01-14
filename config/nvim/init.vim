@@ -60,7 +60,7 @@ Plug 'tpope/vim-fireplace',          { 'for': 'clojure' }
 Plug 'vim-scripts/paredit.vim',      { 'for': 'clojure' }
 Plug 'venantius/vim-cljfmt',         { 'for': 'clojure' }
 
-Plug 'akalyaev/vim-erlang-spec',      { 'for': 'erlang' }
+Plug 'melekes/vim-erlang-spec',      { 'for': 'erlang' }
 Plug 'edkolev/erlang-motions.vim',    { 'for': 'erlang' }
 Plug 'vim-erlang/vim-erlang-runtime', { 'for': 'erlang' }
 
