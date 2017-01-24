@@ -37,9 +37,12 @@ Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
+
+if !has('nvim')
+  Plug 'tpope/vim-sensible'
+endif
 
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
