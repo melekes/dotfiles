@@ -52,6 +52,7 @@ Plug 'junegunn/limelight.vim'
 " Plug 'altercation/vim-colors-solarized'
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
 " Plug 'morhetz/gruvbox'
+" Plug 'joshdick/onedark.vim'
 
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 Plug 'tpope/vim-endwise',              { 'for': 'ruby' }
