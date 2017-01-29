@@ -59,7 +59,7 @@ Plug 'tpope/vim-endwise',              { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby',              { 'for': 'ruby' }
 
 Plug 'guns/vim-clojure-static',      { 'for': 'clojure' }
-Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure', 'on': ['RainbowParenthesesToggle', 'RainbowParenthesesLoadRound', 'RainbowParenthesesLoadSquare', 'RainbowParenthesesLoadBraces'] }
+Plug 'luochen1990/rainbow',          { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace',          { 'for': 'clojure' }
 Plug 'vim-scripts/paredit.vim',      { 'for': 'clojure' }
 Plug 'venantius/vim-cljfmt',         { 'for': 'clojure' }
