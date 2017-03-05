@@ -8,6 +8,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'FooSoft/vim-argwrap'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/echodoc.vim'
+Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'benekastah/neomake'
 Plug 'benmills/vimux'
@@ -329,6 +330,12 @@ let g:go_auto_type_info = 1
 
 " TagBar
 nmap <leader>tb :TagbarToggle<CR>
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
 " }}}
 
 " vp doesn't replace paste buffer
