@@ -29,6 +29,7 @@ Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
+Plug 'rizzatti/dash.vim'
 Plug 'ryanoasis/vim-devicons' " requires https://github.com/ryanoasis/nerd-fonts or patched font
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
@@ -51,8 +52,8 @@ Plug 'junegunn/limelight.vim'
 " Themes
 " Plug 'altercation/vim-colors-solarized'
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
-" Plug 'morhetz/gruvbox'
-" Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 Plug 'tpope/vim-endwise',              { 'for': 'ruby' }
@@ -91,7 +92,7 @@ endif
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme onedark
 
 set shell=/bin/bash                   " required for Vim to work inside Fish shell
 set cursorline                        " Highlight current line
