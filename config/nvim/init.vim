@@ -226,7 +226,7 @@ let g:lightline = {
     \ }
 
 " Vimux
-nmap <leader>v <Plug>VimuxRunLastCommand
+nmap <leader>v :call VimuxRunLastCommand()<CR>
 
 " vim-lexical
 augroup lexical
