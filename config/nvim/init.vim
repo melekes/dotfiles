@@ -35,6 +35,7 @@ Plug 'ryanoasis/vim-devicons' " requires https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-obsession'
