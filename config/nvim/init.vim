@@ -223,7 +223,8 @@ let g:lightline = {
     \ 'active': {
     \   'right': [ [ 'lineinfo' ],
     \              [ 'percent' ] ]
-    \ }
+    \ },
+    \ 'colorscheme': 'onedark',
     \ }
 
 " Vimux
