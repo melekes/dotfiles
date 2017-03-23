@@ -22,6 +22,7 @@
 [core]
   excludesfile = ~/.gitignore_global
   autocrlf = input
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [apply]
   whitespace = nowarn
@@ -52,3 +53,8 @@
 	gpgsign = true
 [tag]
 	gpgsign = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
