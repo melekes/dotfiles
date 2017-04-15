@@ -16,9 +16,6 @@
   ltag =! bash -c 'git tag -l | sort -V | tail -1'
   lp = log -p
 
-[color]
-  ui = auto
-
 [core]
   excludesfile = ~/.gitignore_global
   autocrlf = input
