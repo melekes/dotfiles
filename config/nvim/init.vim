@@ -47,8 +47,8 @@ if !has('nvim')
 endif
 
 " Distraction free writing
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+" Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/limelight.vim'
 
 " Themes
 " Plug 'altercation/vim-colors-solarized'
@@ -93,7 +93,7 @@ endif
 
 syntax enable
 set background=dark
-colorscheme onedark
+colorscheme solarized
 
 set shell=/bin/bash                   " required for Vim to work inside Fish shell
 set cursorline                        " Highlight current line
@@ -223,7 +223,7 @@ let g:lightline = {
     \   'right': [ [ 'lineinfo' ],
     \              [ 'percent' ] ]
     \ },
-    \ 'colorscheme': 'onedark',
+    \ 'colorscheme': 'solarized',
     \ }
 
 " Vimux
