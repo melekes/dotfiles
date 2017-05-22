@@ -18,7 +18,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'gitignore.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
@@ -92,7 +91,7 @@ if has("termguicolors")
 endif
 
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
 set shell=/bin/bash                   " required for Vim to work inside Fish shell
