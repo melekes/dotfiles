@@ -261,14 +261,25 @@ let g:neomake_erlang_erlc_maker = {
       \ }
 
 " fzf :heart: vim
-" See https://github.com/junegunn/fzf#respecting-gitignore-hgignore-and-svnignore
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" --files: List files that would be searched but do not search
+" --no-ignore: Do not respect .gitignore, etc...
+" --hidden: Search hidden files and folders
+" --follow: Follow symlinks
+" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 
 nmap <leader>f :Files<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>r :History<CR>
 nmap <leader>gf :GitFiles<CR>
-nmap <leader>/ :Ag <C-R><C-W><CR>
+nmap <leader>/ :Rg <C-R><C-W><CR>
 
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
