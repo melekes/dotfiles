@@ -13,6 +13,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'benekastah/neomake'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'dyng/ctrlsf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
@@ -25,11 +26,11 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'kana/vim-textobj-user'
-Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
 Plug 'rizzatti/dash.vim'
+Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
 Plug 'terryma/vim-multiple-cursors'
@@ -333,9 +334,6 @@ let g:go_fmt_command = "goimports"
 let g:go_def_mapping_enabled = 0
 au FileType go nmap gd <Plug>(go-def)
 let g:go_auto_type_info = 1
-
-" TagBar
-nmap <leader>tb :TagbarToggle<CR>
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
