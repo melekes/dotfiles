@@ -122,6 +122,7 @@ set tags+=.git/tags
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
 set nojoinspaces                      " Don't add 2 spaces when using J
 set autowriteall                      " Write the contents of the file as frequent as possible
+set grepprg=rg\ --vimgrep             " Use rg as grep program
 
 set clipboard+=unnamedplus
 
@@ -295,6 +296,7 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
+" Status line (neovim)
 function! s:fzf_statusline()
   " Override statusline as you like
   highlight fzf1 ctermfg=161 ctermbg=251
