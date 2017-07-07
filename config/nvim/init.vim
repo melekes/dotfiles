@@ -76,10 +76,9 @@ Plug 'eagletmt/ghcmod-vim',       { 'for': 'haskell' }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-
 Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'iamcco/markdown-preview.vim', { 'for': 'markdown' }
 
 " Add plugins to &runtimepath
 call plug#end()
