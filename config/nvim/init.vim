@@ -347,7 +347,14 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 let g:go_def_mapping_enabled = 0
 au FileType go nmap gd <Plug>(go-def)
-let g:go_auto_type_info = 1
+" let g:go_auto_type_info = 1
+" let g:go_metalinter_command = "gometalinter --vendor"
+" let g:go_echo_command_info = 1
+let g:go_metalinter_enabled = ['vet', 'vetshadow', 'golint', 'deadcode', 'varcheck', 'structcheck', 'ineffassign', 'interfacer', 'unconvert', 'goconst', 'gosimple', 'staticcheck']
+nmap <silent> <leader>m :GoMetaLinter<CR>
+" let g:go_metalinter_autosave = 1
+" let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "30s"
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
