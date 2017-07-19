@@ -188,6 +188,17 @@ au vimrc BufWritePre * :%s/\s\+$//e
 
 au vimrc Filetype erlang setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
+" Fix some common typos
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
 " }}}
 
 " Windows And Splits ------ {{{
