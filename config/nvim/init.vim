@@ -7,7 +7,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'FooSoft/vim-argwrap'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'Shougo/echodoc.vim'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
@@ -42,6 +41,7 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 if !has('nvim')
   Plug 'tpope/vim-sensible'
@@ -76,8 +76,11 @@ Plug 'eagletmt/ghcmod-vim',       { 'for': 'haskell' }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+
 Plug 'fatih/vim-go', { 'for': 'go' }
+
 Plug 'iamcco/markdown-preview.vim', { 'for': 'markdown' }
 
 " Add plugins to &runtimepath
@@ -176,6 +179,9 @@ noremap <leader>S :w !sudo tee %<CR>
 
 " Resize splits when the window is resized
 au vimrc VimResized * :wincmd =
+
+" Autosave buffers before leaving them
+au BufLeave * silent! :wa
 
 " Automatically removing all trailing whitespace
 au vimrc BufWritePre * :%s/\s\+$//e
