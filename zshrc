@@ -51,7 +51,8 @@ ZSH_THEME="random"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode tmux z)
+plugins=(git vi-mode tmux z gpg-agent zsh-autosuggestions)
+# TODO: see osx git-extras vagrant web-search
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,16 +89,6 @@ export ZSH_TMUX_AUTOSTART=true
 
 export VISUAL=nvim
 export EDITOR=$VISUAL
-
-# kill -0 checks to see if the pid exists
-if test -f $HOME/.gpg-agent-info && kill -0 `cut -d: -f 2 $HOME/.gpg-agent-info` 2>/dev/null; then
-    GPG_AGENT_INFO=`cat $HOME/.gpg-agent-info | cut -c 16-`
-else
-# No, gpg-agent not available; start gpg-agent
-    eval `gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info`
-fi
-export GPG_TTY=`tty`
-export GPG_AGENT_INFO
 
 if [[ -f ~/.aliases ]]; then
   source ~/.aliases
