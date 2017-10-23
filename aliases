@@ -24,6 +24,6 @@ alias mkdir="mkdir -p"
 alias ll="ls -al"
 
 # Include custom aliases
-if test -e ~/.aliases.local
+if [[ -f ~/.aliases.local ]]; then
   source ~/.aliases.local
-end
+fi

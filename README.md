@@ -6,8 +6,7 @@
   [vim-plug](https://github.com/junegunn/vim-plug)
 * [tmux](http://robots.thoughtbot.com/a-tmux-crash-course) (prefix is `Ctrl-f`) +
   [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
-* [fish](https://github.com/fish-shell/fish-shell) +
-  [Fisherman](https://github.com/fisherman/fisherman)
+* zsh + [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 *Be sure, you had these installed before proceeding.*
 
@@ -51,7 +50,7 @@ Put your customizations in dotfiles appended with `.local`:
 * `~/.aliases.local`
 * `~/.gitconfig.local`
 * `~/.tmux.conf.local`
-* `~/.config/fish/config.fish.local`
+* `~/.zshrc.local`
 * `~/.config/nvim/init.vim.local`
 
 For example, your `~/.aliases.local` might look like this:
