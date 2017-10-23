@@ -54,6 +54,11 @@ ZSH_THEME="random"
 plugins=(git vi-mode tmux z gpg-agent zsh-autosuggestions)
 # TODO: see osx git-extras vagrant web-search
 
+# gpg-agent needed for signing git commits
+# http://homeonrails.com/2017/01/signing-git-commits/
+
+# zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
