@@ -6,11 +6,10 @@ Plug 'AndrewRadev/sideways.vim', { 'on': ['SidewaysLeft', 'SidewaysRight'] }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'FooSoft/vim-argwrap'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/echodoc.vim'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
-Plug 'benekastah/neomake'
+" Plug 'benekastah/neomake'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dhruvasagar/vim-table-mode'
@@ -30,6 +29,7 @@ Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
 Plug 'rizzatti/dash.vim'
+Plug 'roxma/nvim-completion-manager'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
@@ -41,7 +41,7 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'w0rp/ale'
 
 if !has('nvim')
   Plug 'tpope/vim-sensible'
@@ -272,7 +272,7 @@ nmap <silent> <leader>tv :TestVisit<CR>
 let test#strategy = "vimux"
 
 " Neomake
-autocmd! BufWritePost * Neomake
+" autocmd! BufWritePost * Neomake
 
 let g:neomake_erlang_erlc_maker = {
       \ 'args': ['-I src/records']
