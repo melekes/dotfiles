@@ -25,7 +25,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'kana/vim-textobj-user'
-Plug 'luochen1990/rainbow'
 Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
@@ -63,6 +62,7 @@ Plug 'tpope/vim-endwise',              { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby',              { 'for': 'ruby' }
 
 Plug 'guns/vim-clojure-static',      { 'for': 'clojure' }
+Plug 'luochen1990/rainbow',          { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace',          { 'for': 'clojure' }
 Plug 'vim-scripts/paredit.vim',      { 'for': 'clojure' }
 Plug 'venantius/vim-cljfmt',         { 'for': 'clojure' }
