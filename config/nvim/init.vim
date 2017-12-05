@@ -25,6 +25,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'kana/vim-textobj-user'
+Plug 'luochen1990/rainbow'
 Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
@@ -62,7 +63,6 @@ Plug 'tpope/vim-endwise',              { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby',              { 'for': 'ruby' }
 
 Plug 'guns/vim-clojure-static',      { 'for': 'clojure' }
-Plug 'luochen1990/rainbow',          { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace',          { 'for': 'clojure' }
 Plug 'vim-scripts/paredit.vim',      { 'for': 'clojure' }
 Plug 'venantius/vim-cljfmt',         { 'for': 'clojure' }
@@ -337,11 +337,8 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" vim-clojure-highlight
-au VimEnter *       RainbowParenthesesToggle
-au Syntax   clojure RainbowParenthesesLoadRound
-au Syntax   clojure RainbowParenthesesLoadSquare
-au Syntax   clojure RainbowParenthesesLoadBraces
+" rainbow
+let g:rainbow_active = 1
 
 " ArgWrap
 nmap <silent> <leader>w :ArgWrap<CR>
