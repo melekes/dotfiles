@@ -9,6 +9,10 @@ Plug 'FooSoft/vim-argwrap'
 Plug 'Shougo/echodoc.vim'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dhruvasagar/vim-table-mode'
@@ -221,8 +225,14 @@ set smartcase
 
 " Plugins ------ {{{
 
-" nvim-completion-manager
-set shortmess+=c
+" LanguageClient
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ 'go': ['go-langserver'],
+    \ }
+
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 
 " ale
 let g:ale_linters = {'rust': ['rustc']}
@@ -383,13 +393,10 @@ let g:go_def_mapping_enabled = 0
 au FileType go nmap gd <Plug>(go-def)
 let g:go_auto_type_info = 1
 let g:go_addtags_transform = "snakecase"
-" let g:go_metalinter_command = "gometalinter --vendor"
-" let g:go_echo_command_info = 1
-let g:go_metalinter_enabled = ['vet', 'vetshadow', 'golint', 'deadcode', 'varcheck', 'structcheck', 'ineffassign', 'interfacer', 'unconvert', 'goconst', 'gosimple', 'staticcheck']
-nmap <silent> <leader>m :GoMetaLinter<CR>
-" let g:go_metalinter_autosave = 1
+
+" let g:go_metalinter_enabled = ['vet', 'vetshadow', 'golint', 'deadcode', 'varcheck', 'structcheck', 'ineffassign', 'interfacer', 'unconvert', 'goconst', 'gosimple', 'staticcheck']
 " let g:go_metalinter_autosave_enabled = ['vet', 'golint']
-let g:go_metalinter_deadline = "30s"
+" let g:go_metalinter_autosave = 1
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
