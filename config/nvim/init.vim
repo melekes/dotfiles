@@ -9,7 +9,6 @@ Plug 'FooSoft/vim-argwrap'
 Plug 'Shougo/echodoc.vim'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
-" Plug 'benekastah/neomake'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dhruvasagar/vim-table-mode'
@@ -221,6 +220,15 @@ set smartcase
 " }}}
 
 " Plugins ------ {{{
+
+" nvim-completion-manager
+set shortmess+=c
+
+" ale
+let g:ale_linters = {'rust': ['rustc']}
+
+" Rust
+let g:rustfmt_autosave = 1
 
 " Vim-Json
 let g:vim_json_syntax_conceal = 0
