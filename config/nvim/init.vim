@@ -235,7 +235,7 @@ nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 
 " ale
-let g:ale_linters = {'rust': ['rustc']}
+let g:ale_linters = {'rust': ['rls']}
 
 " Rust
 let g:rustfmt_autosave = 1
