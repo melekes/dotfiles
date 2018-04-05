@@ -98,8 +98,8 @@ if has("termguicolors")
 endif
 
 syntax enable
-set background=light
-colorscheme solarized
+" set background=dark
+colorscheme onedark
 
 set shell=/bin/bash                   " required for Vim to work inside Fish shell
 set cursorline                        " Highlight current line
