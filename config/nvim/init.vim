@@ -6,9 +6,10 @@ Plug 'AndrewRadev/sideways.vim', { 'on': ['SidewaysLeft', 'SidewaysRight'] }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'FooSoft/vim-argwrap'
+Plug 'RRethy/vim-illuminate'
 Plug 'Shougo/echodoc.vim'
 Plug 'SirVer/ultisnips'
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -45,6 +46,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
+Plug 'liuchengxu/vim-which-key'
 
 if !has('nvim')
   Plug 'tpope/vim-sensible'
@@ -225,9 +227,12 @@ set smartcase
 
 " Plugins ------ {{{
 
+" WhichKey
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
+
 " LanguageClient
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ 'go': ['go-langserver'],
     \ }
 
@@ -235,7 +240,7 @@ nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 
 " ale
-let g:ale_linters = {'rust': ['rls']}
+" let g:ale_linters = {'rust': ['rls']}
 
 " Rust
 let g:rustfmt_autosave = 1
