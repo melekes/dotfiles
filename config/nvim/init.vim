@@ -33,7 +33,6 @@ Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
 Plug 'rizzatti/dash.vim'
-Plug 'roxma/nvim-completion-manager'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
@@ -47,6 +46,9 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
 Plug 'liuchengxu/vim-which-key'
+Plug 'zivyangll/git-blame.vim'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
 
 if !has('nvim')
   Plug 'tpope/vim-sensible'
@@ -58,8 +60,8 @@ endif
 
 " Themes
 " Plug 'altercation/vim-colors-solarized'
-Plug 'frankier/neovim-colors-solarized-truecolor-only'
-Plug 'morhetz/gruvbox'
+" Plug 'frankier/neovim-colors-solarized-truecolor-only'
+" Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
@@ -123,7 +125,14 @@ set nobackup                          " Don't keep backup files
 set hidden
 set scrolloff=5                       " Lines the cursor is to the edge before scrolling
 set complete-=i                       " set complete=.,w,b,u,t
-set completeopt=menu,preview
+" Affects the visual representation of what happens after you hit <C-x><C-o>
+" https://neovim.io/doc/user/insert.html#i_CTRL-X_CTRL-O
+" https://neovim.io/doc/user/options.html#'completeopt'
+"
+" This will show the popup menu even if there's only one match (menuone),
+" prevent automatic selection (noselect) and prevent automatic text injection
+" into the current line (noinsert).
+set completeopt=noinsert,menuone,noselect
 set wildmenu
 set wildmode=full
 set tags+=.git/tags
@@ -407,6 +416,12 @@ let g:go_addtags_transform = "snakecase"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" git-blame
+nnoremap <Leader>gb :<C-u>call gitblame#echo()<CR>
+
+" nvm2
+autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " }}}
 
