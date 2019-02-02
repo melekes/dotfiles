@@ -8,12 +8,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'FooSoft/vim-argwrap'
 Plug 'RRethy/vim-illuminate'
 Plug 'Shougo/echodoc.vim'
-Plug 'SirVer/ultisnips'
-" Plug 'airblade/vim-gitgutter'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+Plug 'airblade/vim-gitgutter'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dhruvasagar/vim-table-mode'
@@ -47,8 +42,15 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
 Plug 'liuchengxu/vim-which-key'
 Plug 'zivyangll/git-blame.vim'
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
+
+" Completion
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'SirVer/ultisnips'
+
 
 if !has('nvim')
   Plug 'tpope/vim-sensible'
@@ -96,6 +98,7 @@ call plug#end()
 filetype plugin indent on             " required
 
 let mapleader      = ' '
+let maplocalleader = ","
 
 if has("termguicolors")
   set termguicolors
@@ -244,7 +247,7 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 let g:LanguageClient_serverCommands = {
     \ 'go': ['go-langserver'],
     \ }
-
+nnoremap <silent> <leader>l :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 
@@ -303,9 +306,6 @@ nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tv :TestVisit<CR>
 let test#strategy = "vimux"
 
-" Neomake
-" autocmd! BufWritePost * Neomake
-
 let g:neomake_erlang_erlc_maker = {
       \ 'args': ['-I src/records']
       \ }
@@ -360,8 +360,8 @@ autocmd! User FzfStatusLine call <SID>fzf_statusline()
 let g:tmux_navigator_save_on_switch = 1
 
 " Sideways
-nmap <leader>l :SidewaysLeft<CR>
-nmap <leader>h :SidewaysRight<CR>
+nmap <localleader>l :SidewaysLeft<CR>
+nmap <localleader>h :SidewaysRight<CR>
 
 " vim-easy-align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -376,22 +376,8 @@ let g:rainbow_active = 1
 nmap <silent> <leader>w :ArgWrap<CR>
 
 " limelight
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
-" deoplete
-if has('nvim')
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#enable_smart_case = 1
-
-  " Disable deoplete when in multi cursor mode
-  function! Multiple_cursors_before()
-      let b:deoplete_disable_auto_complete = 1
-  endfunction
-  function! Multiple_cursors_after()
-      let b:deoplete_disable_auto_complete = 0
-  endfunction
-endif
+" autocmd! User GoyoEnter Limelight
+" autocmd! User GoyoLeave Limelight!
 
 " vim-go
 let g:go_highlight_build_constraints = 1
@@ -414,14 +400,21 @@ let g:go_addtags_transform = "snakecase"
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger	= "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger	= "<c-k>"
 
 " git-blame
 nnoremap <Leader>gb :<C-u>call gitblame#echo()<CR>
 
-" nvm2
-autocmd BufEnter * call ncm2#enable_for_buffer()
+" deoplete
+let g:deoplete#enable_at_startup = 1
+" disable autocomplete by default
+let b:deoplete_disable_auto_complete=1
+let g:deoplete_disable_auto_complete=1
+let g:deoplete#sources = {}
+call deoplete#custom#option('sources', {
+    \ 'golang': ['LanguageClient'],
+\})
 
 " }}}
 
