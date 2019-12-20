@@ -66,12 +66,13 @@ endif
 " Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 " Plug 'arcticicestudio/nord-vim'
+"
+
+Plug 'sheerun/vim-polyglot'
 
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 Plug 'tpope/vim-endwise',              { 'for': 'ruby' }
-Plug 'vim-ruby/vim-ruby',              { 'for': 'ruby' }
 
-Plug 'guns/vim-clojure-static',      { 'for': 'clojure' }
 Plug 'luochen1990/rainbow',          { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace',          { 'for': 'clojure' }
 Plug 'vim-scripts/paredit.vim',      { 'for': 'clojure' }
@@ -79,19 +80,9 @@ Plug 'venantius/vim-cljfmt',         { 'for': 'clojure' }
 
 Plug 'melekes/vim-erlang-spec',      { 'for': 'erlang' }
 Plug 'edkolev/erlang-motions.vim',    { 'for': 'erlang' }
-Plug 'vim-erlang/vim-erlang-runtime', { 'for': 'erlang' }
 
 Plug 'Shougo/vimproc',            { 'for': 'haskell' }
 Plug 'eagletmt/ghcmod-vim',       { 'for': 'haskell' }
-Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-
-Plug 'fatih/vim-go', { 'for': 'go' }
-
-Plug 'iamcco/markdown-preview.vim', { 'for': 'markdown' }
 
 " Add plugins to &runtimepath
 call plug#end()
