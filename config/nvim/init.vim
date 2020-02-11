@@ -39,7 +39,7 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'liuchengxu/vim-which-key'
 Plug 'zivyangll/git-blame.vim'
 
