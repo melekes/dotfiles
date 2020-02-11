@@ -249,22 +249,13 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
 " LanguageClient
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'python': ['/usr/local/bin/pyls'],
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
     \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
     \ 'go': ['go-langserver'],
     \ }
 nnoremap <silent> <leader>l :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-
-" ale
-let g:ale_linters = {'rust': ['rls']}
-
-" Rust
-let g:rustfmt_autosave = 1
 
 " Vim-Json
 let g:vim_json_syntax_conceal = 0
@@ -431,6 +422,10 @@ let g:deoplete#sources = {}
 call deoplete#custom#option('sources', {
     \ 'golang': ['LanguageClient'],
 \})
+
+
+" rust.vim
+let g:rustfmt_autosave = 1
 
 " }}}
 
