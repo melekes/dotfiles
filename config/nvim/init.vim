@@ -51,7 +51,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
-
+Plug 'honza/vim-snippets'
 
 if !has('nvim')
   Plug 'tpope/vim-sensible'
