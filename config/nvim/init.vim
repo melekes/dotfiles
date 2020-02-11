@@ -42,6 +42,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'dense-analysis/ale'
 Plug 'liuchengxu/vim-which-key'
 Plug 'zivyangll/git-blame.vim'
+Plug 'zxqfl/tabnine-vim', { 'on': ['TabNine'] }
 
 " Completion
 Plug 'autozimu/LanguageClient-neovim', {
