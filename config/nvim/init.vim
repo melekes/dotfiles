@@ -251,7 +251,7 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
     \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
-    \ 'go': ['go-langserver'],
+    \ 'go': ['gopls'],
     \ }
 nnoremap <silent> <leader>l :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
@@ -426,6 +426,12 @@ call deoplete#custom#option('sources', {
 
 " rust.vim
 let g:rustfmt_autosave = 1
+
+" ale
+let g:ale_linters = {
+	\ 'go': ['gopls'],
+	\}
+let g:ale_fix_on_save = 1
 
 " }}}
 
