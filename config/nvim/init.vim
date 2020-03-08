@@ -18,7 +18,6 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
@@ -30,7 +29,6 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
-Plug 'rizzatti/dash.vim'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
@@ -74,9 +72,10 @@ Plug 'junegunn/limelight.vim'
 " Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 " Plug 'arcticicestudio/nord-vim'
-"
 
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
+
+Plug 'elzr/vim-json', { 'for': 'json' }
 
 Plug 'vim-ruby/vim-ruby',              { 'for': 'ruby' }
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
