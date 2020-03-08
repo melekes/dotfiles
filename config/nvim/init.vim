@@ -48,10 +48,16 @@ Plug 'zxqfl/tabnine-vim', { 'on': ['TabNine'] }
 
 " Completion
 Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh',
+      \ }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
@@ -251,13 +257,14 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
 " LanguageClient
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
-    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
-    \ 'go': ['gopls'],
-    \ }
+      \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
+      \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+      \ 'go': ['gopls'],
+      \ }
 nnoremap <silent> <leader>l :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+set completefunc=LanguageClient#complete
 
 " Vim-Json
 let g:vim_json_syntax_conceal = 0
@@ -274,12 +281,12 @@ nmap <leader>nf :NERDTreeFind<CR>
 
 " lightline
 let g:lightline = {
-    \ 'active': {
-    \   'right': [ [ 'lineinfo' ],
-    \              [ 'percent' ] ]
-    \ },
-    \ 'colorscheme': 'solarized',
-    \ }
+      \ 'active': {
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ] ]
+      \ },
+      \ 'colorscheme': 'solarized',
+      \ }
 
 " Vimux
 nmap <leader>vp :call VimuxPromptCommand()<CR>
@@ -321,11 +328,11 @@ let g:neomake_erlang_erlc_maker = {
 let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
+      \ call fzf#vim#grep(
+      \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+      \   <bang>0 ? fzf#vim#with_preview('up:60%')
+      \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \   <bang>0)
 
 nmap <leader>f :Files<CR>
 nmap <leader>b :Buffers<CR>
@@ -400,39 +407,20 @@ let g:go_addtags_transform = "snakecase"
 " let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 " let g:go_metalinter_autosave = 1
 
-" ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger	= "<c-j>"
-let g:UltiSnipsJumpBackwardTrigger	= "<c-k>"
 
 " git-blame
 nnoremap <Leader>gb :<C-u>call gitblame#echo()<CR>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-" disable autocomplete by default
-let b:deoplete_disable_auto_complete=1
-let g:deoplete_disable_auto_complete=1
-" Disable deoplete when in multi cursor mode
-function! Multiple_cursors_before()
-    let b:deoplete_disable_auto_complete = 1
-endfunction
-function! Multiple_cursors_after()
-    let b:deoplete_disable_auto_complete = 0
-endfunction
-let g:deoplete#sources = {}
-call deoplete#custom#option('sources', {
-    \ 'golang': ['LanguageClient'],
-\})
 
-
-" rust.vim
-let g:rustfmt_autosave = 1
+" ultisnips
+let g:UltiSnipsExpandTrigger="<c-e>"
 
 " ale
 let g:ale_linters = {
-	\ 'go': ['gopls'],
-	\}
+      \ 'go': ['gopls'],
+      \}
 let g:ale_fix_on_save = 1
 
 " AutoFormat
