@@ -426,6 +426,10 @@ let g:ale_fix_on_save = 1
 " AutoFormat
 autocmd BufWrite * :Autoformat
 
+" Supertab
+" Press Tab to scroll _down_ a list of auto-completions
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
 " }}}
 
 " vp doesn't replace paste buffer
