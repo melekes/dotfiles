@@ -19,7 +19,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'ervandew/supertab'
 Plug 'itchyny/lightline.vim'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
@@ -414,9 +413,6 @@ nnoremap <Leader>gb :<C-u>call gitblame#echo()<CR>
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
-" ultisnips
-let g:UltiSnipsExpandTrigger="<c-e>"
-
 " ale
 let g:ale_linters = {
       \ 'go': ['gopls'],
@@ -425,10 +421,6 @@ let g:ale_fix_on_save = 1
 
 " AutoFormat
 autocmd BufWrite * :Autoformat
-
-" Supertab
-" Press Tab to scroll _down_ a list of auto-completions
-let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " }}}
 
