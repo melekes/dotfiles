@@ -60,8 +60,8 @@ if !has('nvim')
 endif
 
 " Distraction free writing
-" Plug 'junegunn/goyo.vim'
-" Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " Themes
 " Plug 'altercation/vim-colors-solarized'
@@ -378,8 +378,8 @@ let g:rainbow_active = 1
 nmap <silent> <leader>w :ArgWrap<CR>
 
 " limelight
-" autocmd! User GoyoEnter Limelight
-" autocmd! User GoyoLeave Limelight!
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " vim-go
 let g:go_highlight_build_constraints = 1
