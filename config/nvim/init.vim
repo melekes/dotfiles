@@ -97,7 +97,7 @@ Plug 'eagletmt/ghcmod-vim',       { 'for': 'haskell' }
 
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
-Plug 'fatih/vim-go',      { 'for': 'go' }
+Plug 'fatih/vim-go',      { 'for': 'go', 'tag': '*' }
 Plug 'buoto/gotests-vim', { 'for': 'go' }
 
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
