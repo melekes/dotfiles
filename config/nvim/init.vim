@@ -8,7 +8,6 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'FooSoft/vim-argwrap'
 Plug 'RRethy/vim-illuminate'
-Plug 'Shougo/echodoc.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
@@ -29,7 +28,6 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
-Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
 Plug 'terryma/vim-multiple-cursors'
@@ -41,7 +39,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'zivyangll/git-blame.vim'
-Plug 'zxqfl/tabnine-vim', { 'on': ['TabNine'] }
+Plug 'zxqfl/tabnine-vim', { 'on': 'TabNine' }
 
 " Completion
 Plug 'autozimu/LanguageClient-neovim', {
@@ -400,6 +398,8 @@ let g:go_def_mapping_enabled = 0
 au FileType go nmap gd <Plug>(go-def)
 let g:go_auto_type_info = 1
 let g:go_addtags_transform = "snakecase"
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " let g:go_metalinter_enabled = ['vet', 'vetshadow', 'golint', 'deadcode', 'varcheck', 'structcheck', 'ineffassign', 'interfacer', 'unconvert', 'goconst', 'gosimple', 'staticcheck']
 " let g:go_metalinter_autosave_enabled = ['vet', 'golint']
@@ -413,13 +413,14 @@ nnoremap <Leader>gb :<C-u>call gitblame#echo()<CR>
 let g:deoplete#enable_at_startup = 1
 
 " ale
-let g:ale_linters = {
-      \ 'go': ['gopls'],
-      \}
+" let g:ale_linters = {
+"       \ 'go': ['gopls'],
+"       \}
 let g:ale_fix_on_save = 1
 
 " AutoFormat
-autocmd BufWrite * :Autoformat
+" autocmd BufWrite * :Autoformat
+" autocmd FileType markdown,mkd let b:autoformat_autoindent=0
 
 " }}}
 
