@@ -15,6 +15,7 @@
   url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
   ltag =! bash -c 'git tag -l | sort -V | tail -1'
   lp = log -p
+  set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 
 [core]
   excludesfile = ~/.gitignore_global
