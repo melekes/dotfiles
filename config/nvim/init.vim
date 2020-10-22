@@ -40,6 +40,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'zivyangll/git-blame.vim'
 Plug 'zxqfl/tabnine-vim', { 'on': 'TabNine' }
+Plug 'ruanyl/vim-gh-line'
 
 " Completion
 Plug 'autozimu/LanguageClient-neovim', {
@@ -183,12 +184,6 @@ vnoremap L g_
 
 " Switch between last two buffers
 nnoremap <leader><leader> <C-^>
-
-" Open current line on Stash
-" nnoremap <leader>ou :!echo `git url`/%?at=`git rev-parse HEAD`\#<C-R>=line('.')<CR> \| xargs open<CR><CR>
-
-" Open current line on Github
-nnoremap <leader>ou :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs open<CR><CR>
 
 augroup vimrc
   autocmd!
