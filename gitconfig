@@ -20,7 +20,6 @@
 [core]
   excludesfile = ~/.gitignore_global
   autocrlf = input
-	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [apply]
   whitespace = nowarn
