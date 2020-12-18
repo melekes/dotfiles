@@ -200,7 +200,7 @@ au vimrc VimResized * :wincmd =
 au BufLeave * silent! :wa
 
 " Automatically removing all trailing whitespace
-au vimrc BufWritePre * :%s/\s\+$//e
+" au vimrc BufWritePre * :%s/\s\+$//e
 
 au vimrc Filetype erlang setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
@@ -404,9 +404,14 @@ nnoremap <Leader>gb :<C-u>call gitblame#echo()<CR>
 let g:deoplete#enable_at_startup = 1
 
 " ale
-" let g:ale_linters = {
-"       \ 'go': ['gopls'],
-"       \}
+let g:ale_linters = {
+      \ 'go': ['gopls'],
+      \ 'rust': ['rust-analyzer'],
+      \}
+let g:ale_fixers = {
+      \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \   'rust': ['rustfmt'],
+      \}
 let g:ale_fix_on_save = 1
 
 " AutoFormat
