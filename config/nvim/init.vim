@@ -408,10 +408,6 @@ let g:go_info_mode='gopls'
 " let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 " let g:go_metalinter_autosave = 1
 
-
-" git-blame
-nnoremap <Leader>gb :<C-u>call gitblame#echo()<CR>
-
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
