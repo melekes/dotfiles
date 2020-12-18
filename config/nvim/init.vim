@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/sideways.vim', { 'on': ['SidewaysLeft', 'SidewaysRight'] }
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Chiel92/vim-autoformat'
+" Plug 'Chiel92/vim-autoformat'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'FooSoft/vim-argwrap'
 Plug 'RRethy/vim-illuminate'
@@ -413,10 +413,6 @@ let g:ale_fixers = {
       \   'rust': ['rustfmt'],
       \}
 let g:ale_fix_on_save = 1
-
-" AutoFormat
-" autocmd BufWrite * :Autoformat
-" autocmd FileType markdown,mkd let b:autoformat_autoindent=0
 
 " }}}
 
