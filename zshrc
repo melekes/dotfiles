@@ -102,6 +102,8 @@ fi
 # alias tmux for proper coloring
 alias tmux="TERM=xterm-256color tmux"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
