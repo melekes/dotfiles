@@ -75,7 +75,6 @@ Your `~/.config/fish/config.fish.local` might look like this:
 
 * `e` for $EDITOR
 * git aliases (`gst`, `gci`, `ga`, etc.)
-* vagrant aliases (`vup`, `vhl`, `vssh`, etc.)
 
 ## Thanks
 
