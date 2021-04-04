@@ -42,6 +42,9 @@ Install Vim plugins: open Vim and type `:PlugInstall`.
 
 Install Tmux plugins: run tmux and hit `Ctrl-f + I`.
 
+Install [Universal Ctags](https://github.com/universal-ctags/ctags). Otherwise
+"Jump to Tag Definition" (`Ctrl-]`)  won't work.
+
 ## Make your own customizations
 
 Put your customizations in dotfiles appended with `.local`:
