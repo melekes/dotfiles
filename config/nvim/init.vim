@@ -41,6 +41,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'zivyangll/git-blame.vim'
 Plug 'zxqfl/tabnine-vim', { 'on': 'TabNine' }
 Plug 'ruanyl/vim-gh-line'
+Plug 'majutsushi/tagbar'
 
 " Completion
 Plug 'autozimu/LanguageClient-neovim', {
@@ -433,6 +434,25 @@ function! s:Repl()
   return "p@=RestoreRegister()\<cr>"
 endfunction
 vmap <silent> <expr> p <sid>Repl()
+
+" vim-multiple-cursors
+" see https://github.com/terryma/vim-multiple-cursors/issues/235
+func! Multiple_cursors_before()
+  if deoplete#is_enabled()
+    call deoplete#disable()
+    let g:deoplete_is_enable_before_multi_cursors = 1
+  else
+    let g:deoplete_is_enable_before_multi_cursors = 0
+  endif
+endfunc
+func! Multiple_cursors_after()
+  if g:deoplete_is_enable_before_multi_cursors
+    call deoplete#enable()
+  endif
+endfunc
+
+"tagbar
+nnoremap <silent> <leader>l :TagbarOpen fjc<CR>
 
 " Local config
 if filereadable($HOME . "/.config/nvim/init.vim.local")
