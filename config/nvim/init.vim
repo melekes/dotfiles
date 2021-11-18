@@ -69,7 +69,7 @@ Plug 'junegunn/limelight.vim'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'frankier/neovim-colors-solarized-truecolor-only'
 " Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
+Plug 'joshdick/onedark.vim', { 'branch': 'main' }
 " Plug 'arcticicestudio/nord-vim'
 
 "One to rule them all, one to find them, one to bring them all and in the darkness bind them.
