@@ -24,7 +24,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'kana/vim-textobj-user'
 Plug 'liuchengxu/vim-which-key'
-Plug 'mhinz/vim-startify'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'reedes/vim-lexical'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
