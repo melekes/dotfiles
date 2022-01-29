@@ -17,7 +17,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'janko-m/vim-test'
+Plug 'vim-test/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
