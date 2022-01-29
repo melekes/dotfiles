@@ -38,7 +38,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'zivyangll/git-blame.vim'
-Plug 'zxqfl/tabnine-vim', { 'on': 'TabNine' }
 Plug 'ruanyl/vim-gh-line'
 Plug 'majutsushi/tagbar'
 
@@ -50,6 +49,12 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
+if has('win32') || has('win64')
+  Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1', 'on': 'TabNine' }
+else
+  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh', 'on': 'TabNine' }
+endif
 
 " Distraction free writing
 Plug 'junegunn/goyo.vim'
