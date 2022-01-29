@@ -395,6 +395,11 @@ let g:go_info_mode='gopls'
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
+" ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 " ale
 let g:ale_linters = {
       \ 'go': ['gopls'],
