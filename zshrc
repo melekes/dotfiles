@@ -51,11 +51,8 @@ ZSH_THEME="jreese"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode tmux z gpg-agent zsh-autosuggestions)
+plugins=(git vi-mode tmux z zsh-autosuggestions)
 # TODO: see osx git-extras vagrant web-search
-
-# gpg-agent needed for signing git commits
-# http://homeonrails.com/2017/01/signing-git-commits/
 
 # zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions
 
@@ -104,3 +101,6 @@ fi
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
+
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
