@@ -41,10 +41,7 @@ Plug 'ruanyl/vim-gh-line'
 Plug 'majutsushi/tagbar'
 
 " Completion
-Plug 'autozimu/LanguageClient-neovim', {
-      \ 'branch': 'next',
-      \ 'do': 'bash install.sh',
-      \ }
+Plug 'neovim/nvim-lspconfig'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -74,6 +71,11 @@ Plug 'sbdchd/neoformat'
 " Language specific plugins
 
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+" NOTE: doesn't work when { 'for': 'rust' } is added
+Plug 'simrat39/rust-tools.nvim'
+" Debugging
+Plug 'nvim-lua/plenary.nvim', { 'for': 'rust' }
+Plug 'mfussenegger/nvim-dap', { 'for': 'rust' }
 
 Plug 'fatih/vim-go',      { 'for': 'go', 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'buoto/gotests-vim', { 'for': 'go' }
@@ -222,29 +224,6 @@ set smartcase
 " WhichKey
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
-
-" LanguageClient
-let g:LanguageClient_serverCommands = {
-      \ 'rust': ['rust-analyzer'],
-      \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
-      \ 'go': ['gopls'],
-      \ }
-function SetLSPShortcuts()
-  nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
-  nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
-  nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
-  nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
-  nnoremap <leader>lx :call LanguageClient#textDocument_references()<CR>
-  nnoremap <leader>la :call LanguageClient_workspace_applyEdit()<CR>
-  nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
-  nnoremap <leader>lh :call LanguageClient#textDocument_hover()<CR>
-  nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
-  nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
-endfunction()
-augroup LSP
-  autocmd!
-  autocmd FileType rust,ruby,go call SetLSPShortcuts()
-augroup END
 
 " Vim-Json
 let g:vim_json_syntax_conceal = 0
@@ -433,6 +412,12 @@ endfunc
 
 "tagbar
 nnoremap <silent> <leader>l :TagbarOpen fjc<CR>
+
+" rust-tools
+:lua require('rust-tools').setup({})
+
+" lnvim-lspconfig
+:luafile ~/.config/nvim/lspconfig.lua
 
 " Local config
 if filereadable($HOME . "/.config/nvim/init.vim.local")
