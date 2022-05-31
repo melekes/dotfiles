@@ -38,13 +38,18 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'zivyangll/git-blame.vim'
 Plug 'ruanyl/vim-gh-line'
-Plug 'majutsushi/tagbar'
 
 " Completion
 Plug 'neovim/nvim-lspconfig'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" For vsnip users.
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
 
 if has('win32') || has('win64')
   Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1', 'on': 'TabNine' }
@@ -123,10 +128,9 @@ set complete-=i                       " set complete=.,w,b,u,t
 " This will show the popup menu even if there's only one match (menuone),
 " prevent automatic selection (noselect) and prevent automatic text injection
 " into the current line (noinsert).
-set completeopt=noinsert,menuone,noselect
+set completeopt=menu,menuone,noselect
 set wildmenu
 set wildmode=full
-set tags+=.git/tags
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
 set nojoinspaces                      " Don't add 2 spaces when using J
 set autowriteall                      " Write the contents of the file as frequent as possible
@@ -353,18 +357,6 @@ let g:go_addtags_transform = "snakecase"
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
-" let g:go_metalinter_enabled = ['vet', 'vetshadow', 'golint', 'deadcode', 'varcheck', 'structcheck', 'ineffassign', 'interfacer', 'unconvert', 'goconst', 'gosimple', 'staticcheck']
-" let g:go_metalinter_autosave_enabled = ['vet', 'golint']
-" let g:go_metalinter_autosave = 1
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
-" ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " ale
 let g:ale_linters = {
       \ 'go': ['gopls'],
@@ -393,25 +385,6 @@ function! s:Repl()
   return "p@=RestoreRegister()\<cr>"
 endfunction
 vmap <silent> <expr> p <sid>Repl()
-
-" vim-multiple-cursors
-" see https://github.com/terryma/vim-multiple-cursors/issues/235
-func! Multiple_cursors_before()
-  if deoplete#is_enabled()
-    call deoplete#disable()
-    let g:deoplete_is_enable_before_multi_cursors = 1
-  else
-    let g:deoplete_is_enable_before_multi_cursors = 0
-  endif
-endfunc
-func! Multiple_cursors_after()
-  if g:deoplete_is_enable_before_multi_cursors
-    call deoplete#enable()
-  endif
-endfunc
-
-"tagbar
-nnoremap <silent> <leader>l :TagbarOpen fjc<CR>
 
 " rust-tools
 :lua require('rust-tools').setup({})

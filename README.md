@@ -8,6 +8,11 @@
   [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 * zsh + [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
+Optional:
+
+* [rust_analyzer](https://rust-analyzer.github.io/)
+* [gopls](https://go.googlesource.com/tools/+/refs/heads/master/gopls/README.md)
+
 *Be sure, you had these installed before proceeding.*
 
 ## Install
