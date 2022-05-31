@@ -41,15 +41,10 @@ Plug 'ruanyl/vim-gh-line'
 
 " Completion
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-
-" For vsnip users.
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'L3MON4D3/LuaSnip'
 
 if has('win32') || has('win64')
   Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1', 'on': 'TabNine' }
@@ -128,7 +123,7 @@ set complete-=i                       " set complete=.,w,b,u,t
 " This will show the popup menu even if there's only one match (menuone),
 " prevent automatic selection (noselect) and prevent automatic text injection
 " into the current line (noinsert).
-set completeopt=menu,menuone,noselect
+set completeopt=noinsert,menuone,noselect
 set wildmenu
 set wildmode=full
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_  " Show “invisible” characters
@@ -391,6 +386,9 @@ vmap <silent> <expr> p <sid>Repl()
 
 " lnvim-lspconfig
 :luafile ~/.config/nvim/lspconfig.lua
+
+" cmp config (https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#nvim-cmp)
+:luafile ~/.config/nvim/cmp.lua
 
 " Local config
 if filereadable($HOME . "/.config/nvim/init.vim.local")
