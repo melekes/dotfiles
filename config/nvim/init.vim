@@ -71,30 +71,12 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'sbdchd/neoformat'
 
-Plug 'vim-ruby/vim-ruby',              { 'for': 'ruby' }
-Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
-Plug 'tpope/vim-endwise',              { 'for': 'ruby' }
-
-Plug 'guns/vim-clojure-static',      { 'for': 'clojure' }
-Plug 'luochen1990/rainbow',          { 'for': 'clojure' }
-Plug 'tpope/vim-fireplace',          { 'for': 'clojure' }
-Plug 'vim-scripts/paredit.vim',      { 'for': 'clojure' }
-Plug 'venantius/vim-cljfmt',         { 'for': 'clojure' }
-
-Plug 'vim-erlang/vim-erlang-runtime', { 'for': 'erlang' }
-Plug 'melekes/vim-erlang-spec',      { 'for': 'erlang' }
-Plug 'edkolev/erlang-motions.vim',    { 'for': 'erlang' }
-
-Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-Plug 'Shougo/vimproc',            { 'for': 'haskell' }
-Plug 'eagletmt/ghcmod-vim',       { 'for': 'haskell' }
+" Language specific plugins
 
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
-Plug 'fatih/vim-go',      { 'for': 'go', 'tag': '*' }
+Plug 'fatih/vim-go',      { 'for': 'go', 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'buoto/gotests-vim', { 'for': 'go' }
-
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
 " Add plugins to &runtimepath
 call plug#end()
