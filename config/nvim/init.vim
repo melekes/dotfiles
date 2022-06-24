@@ -66,8 +66,6 @@ Plug 'joshdick/onedark.vim', { 'branch': 'main' }
 "One to rule them all, one to find them, one to bring them all and in the darkness bind them.
 Plug 'sheerun/vim-polyglot'
 
-Plug 'sbdchd/neoformat'
-
 " Language specific plugins
 
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
@@ -362,12 +360,6 @@ let g:ale_fixers = {
       \   'rust': ['rustfmt'],
       \}
 let g:ale_fix_on_save = 1
-
-" neoformat
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
 " }}}
 
 " vp doesn't replace paste buffer
