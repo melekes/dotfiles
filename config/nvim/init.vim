@@ -17,7 +17,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'vim-test/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -25,7 +24,9 @@ Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'kana/vim-textobj-user'
 Plug 'liuchengxu/vim-which-key'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'preservim/tagbar'
 Plug 'reedes/vim-lexical'
+Plug 'ruanyl/vim-gh-line'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
 Plug 'terryma/vim-multiple-cursors'
@@ -36,8 +37,8 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'vim-test/vim-test'
 Plug 'zivyangll/git-blame.vim'
-Plug 'ruanyl/vim-gh-line'
 
 " Completion
 Plug 'neovim/nvim-lspconfig'
