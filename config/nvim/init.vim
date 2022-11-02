@@ -46,16 +46,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
-
-if has('win32') || has('win64')
-  Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1', 'on': 'TabNine' }
-else
-  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh', 'on': 'TabNine' }
-endif
-
-" Distraction free writing
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+Plug 'github/copilot.vim'
 
 " Themes
 " Plug 'altercation/vim-colors-solarized'
