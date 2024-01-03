@@ -87,7 +87,7 @@ if has("termguicolors")
   set termguicolors
 endif
 
-syntax enable
+syntax on
 " set background=dark
 colorscheme onedark
 
@@ -161,7 +161,6 @@ nnoremap <leader><leader> <C-^>
 augroup vimrc
   autocmd!
 augroup END
-
 " Better commit message
 au vimrc Filetype gitcommit setlocal spell
 
@@ -238,7 +237,7 @@ let g:lightline = {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ] ]
       \ },
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'onedark',
       \ }
 
 " Vimux
