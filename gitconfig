@@ -27,6 +27,7 @@
 [merge]
 	tool = vimdiff
   ff = only
+  conflictstyle = diff3
 
 [mergetool]
   keepBackup = false
