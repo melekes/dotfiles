@@ -18,7 +18,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'kana/vim-textobj-user'
@@ -272,25 +272,12 @@ let g:neomake_erlang_erlc_maker = {
       \ 'args': ['-I src/records']
       \ }
 
-" fzf :heart: vim
-" --files: List files that would be searched but do not search
-" --no-ignore: Do not respect .gitignore, etc...
-" --hidden: Search hidden files and folders
-" --follow: Follow symlinks
-" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
-
-command! -bang -nargs=* Rg
-      \ call fzf#vim#grep(
-      \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
-      \   <bang>0 ? fzf#vim#with_preview('up:60%')
-      \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-      \   <bang>0)
-
+" fzf.vim
 nmap <leader>f :Files<CR>
-nmap <leader>b :Buffers<CR>
 nmap <leader>r :History<CR>
-nmap <leader>gf :GitFiles<CR>
+nmap <leader>gf :GFiles?<CR>
+nmap <leader>l :Lines<CR>
+nmap <leader>c :Commands<CR>
 nmap <leader>/ :Rg <C-R><C-W><CR>
 
 " Mapping selecting mappings
@@ -301,18 +288,17 @@ omap <leader><tab> <plug>(fzf-maps-o)
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 
-" Advanced customization using autoload functions
-inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+" Path completion with custom source command
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
+
+" Word completion with custom spec with popup layout option
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
 
 " Vim Tmux Navigator
 let g:tmux_navigator_save_on_switch = 1
-
-" Sideways
-nmap <localleader>l :SidewaysLeft<CR>
-nmap <localleader>h :SidewaysRight<CR>
 
 " vim-easy-align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
