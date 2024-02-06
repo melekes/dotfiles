@@ -10,10 +10,12 @@ alias gd="git diff"
 alias gs="git stash save --include-untracked"
 alias gsp="git stash pop"
 alias gst="git st"
+alias gup="git pull --rebase"
+alias gp="git push origin HEAD"
 
 # Unix
 alias mkdir="mkdir -p"
-alias ll="ls -al"
+alias ls="ls -al"
 
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then
