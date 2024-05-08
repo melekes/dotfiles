@@ -16,7 +16,6 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -24,6 +23,8 @@ Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'kana/vim-textobj-user'
 Plug 'liuchengxu/vim-which-key'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'preservim/tagbar'
 Plug 'reedes/vim-lexical'
 Plug 'ruanyl/vim-gh-line'
@@ -58,7 +59,7 @@ Plug 'hrsh7th/vim-vsnip'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'frankier/neovim-colors-solarized-truecolor-only'
 " Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim', { 'branch': 'main' }
+Plug 'navarasu/onedark.nvim'
 " Plug 'arcticicestudio/nord-vim'
 
 "One to rule them all, one to find them, one to bring them all and in the darkness bind them.
@@ -232,14 +233,8 @@ let g:EasyMotion_smartcase = 1
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>nf :NERDTreeFind<CR>
 
-" lightline
-let g:lightline = {
-      \ 'active': {
-      \   'right': [ [ 'lineinfo' ],
-      \              [ 'percent' ] ]
-      \ },
-      \ 'colorscheme': 'onedark',
-      \ }
+" lualine
+:lua require('lualine').setup()
 
 " Vimux
 nmap <leader>vp :call VimuxPromptCommand()<CR>
