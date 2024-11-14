@@ -354,7 +354,7 @@ vmap <silent> <expr> p <sid>Repl()
 " rust-tools
 :lua require('rust-tools').setup({})
 
-" nvim-lspconfig (https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#suggested-configuration)
+" nvim-lspconfig (https://github.com/neovim/nvim-lspconfig)
 :luafile ~/.config/nvim/lspconfig.lua
 
 " nvim-cmp config (https://github.com/hrsh7th/nvim-cmp/#recommended-configuration)
