@@ -36,7 +36,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vim-test/vim-test'
 Plug 'zivyangll/git-blame.vim'
 
