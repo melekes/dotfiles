@@ -361,9 +361,7 @@ endfunction
 vmap <silent> <expr> p <sid>Repl()
 
 " avante
-autocmd! User avante.nvim lua << EOF
-require('avante').setup()
-EOF
+:lua require('avante').setup({})
 
 " rust-tools
 :lua require('rust-tools').setup({})
