@@ -25,6 +25,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/tagbar'
 Plug 'reedes/vim-lexical'
 Plug 'ruanyl/vim-gh-line'
@@ -38,6 +39,17 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-test/vim-test'
 Plug 'zivyangll/git-blame.vim'
+
+" Avante
+" Deps
+" Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'stevearc/dressing.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
+
+" Yay, pass source=true if you want to build from source
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
 " Completion
 " https://github.com/hrsh7th/nvim-cmp#setup
@@ -69,10 +81,10 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " NOTE: doesn't work when { 'for': 'rust' } is added
 Plug 'simrat39/rust-tools.nvim'
 " Debugging
-Plug 'nvim-lua/plenary.nvim', { 'for': 'rust' }
+" Plug 'nvim-lua/plenary.nvim', { 'for': 'rust' }
 Plug 'mfussenegger/nvim-dap', { 'for': 'rust' }
 
-Plug 'fatih/vim-go',      { 'for': 'go', 'tag': '*', 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go',      { 'for': 'go', 'do': ':GoUpdateBinaries' }
 Plug 'buoto/gotests-vim', { 'for': 'go' }
 
 " Add plugins to &runtimepath
@@ -348,6 +360,11 @@ function! s:Repl()
   return "p@=RestoreRegister()\<cr>"
 endfunction
 vmap <silent> <expr> p <sid>Repl()
+
+" avante
+autocmd! User avante.nvim lua << EOF
+require('avante').setup()
+EOF
 
 " rust-tools
 :lua require('rust-tools').setup({})
