@@ -41,14 +41,11 @@ Plug 'vim-test/vim-test'
 Plug 'zivyangll/git-blame.vim'
 
 " Avante
-" Deps
 " Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'stevearc/dressing.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'MeanderingProgrammer/render-markdown.nvim'
-
-" Yay, pass source=true if you want to build from source
 Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
 " Completion
@@ -139,6 +136,8 @@ set autowriteall                      " Write the contents of the file as freque
 set grepprg=rg\ --vimgrep             " Use rg as grep program
 
 set clipboard+=unnamedplus
+
+set laststatus=3                      " For avante
 
 " Custom Mappings ------ {{{
 " Quick ESC
