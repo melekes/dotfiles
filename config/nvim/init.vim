@@ -361,7 +361,7 @@ endfunction
 vmap <silent> <expr> p <sid>Repl()
 
 " avante
-:lua require('avante').setup({})
+:luafile ~/.config/nvim/avante.lua
 
 " rust-tools
 :lua require('rust-tools').setup({})
