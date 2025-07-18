@@ -46,7 +46,7 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'stevearc/dressing.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'MunifTanjim/nui.nvim'
-Plug 'MeanderingProgrammer/render-markdown.nvim'
+" Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
 " Completion
@@ -64,11 +64,8 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 " Themes
-" Plug 'altercation/vim-colors-solarized'
-" Plug 'frankier/neovim-colors-solarized-truecolor-only'
-" Plug 'morhetz/gruvbox'
+Plug 'maxmx03/solarized.nvim'
 Plug 'navarasu/onedark.nvim'
-" Plug 'arcticicestudio/nord-vim'
 
 "One to rule them all, one to find them, one to bring them all and in the darkness bind them.
 Plug 'sheerun/vim-polyglot'
@@ -80,7 +77,7 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'simrat39/rust-tools.nvim'
 " Debugging
 " Plug 'nvim-lua/plenary.nvim', { 'for': 'rust' }
-Plug 'mfussenegger/nvim-dap', { 'for': 'rust' }
+Plug 'mfussenegger/nvim-dap'
 
 Plug 'fatih/vim-go',      { 'for': 'go', 'do': ':GoUpdateBinaries' }
 Plug 'buoto/gotests-vim', { 'for': 'go' }
@@ -98,8 +95,8 @@ if has("termguicolors")
 endif
 
 syntax on
-" set background=dark
-colorscheme onedark
+set background=dark
+colorscheme solarized
 
 set shell=/bin/bash                   " required for Vim to work inside Fish shell
 set cursorline                        " Highlight current line
