@@ -63,8 +63,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-" Themes
-Plug 'maxmx03/solarized.nvim'
+" Theme
 Plug 'navarasu/onedark.nvim'
 
 "One to rule them all, one to find them, one to bring them all and in the darkness bind them.
@@ -96,7 +95,7 @@ endif
 
 syntax on
 set background=dark
-colorscheme solarized
+colorscheme onedark
 
 set shell=/bin/bash                   " required for Vim to work inside Fish shell
 set cursorline                        " Highlight current line
