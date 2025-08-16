@@ -17,9 +17,6 @@ alias gp="git push origin HEAD"
 alias mkdir="mkdir -p"
 alias ls="ls -al"
 
-# bat
-alias cat="bat"
-
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then
   source ~/.aliases.local
