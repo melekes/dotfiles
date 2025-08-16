@@ -8,6 +8,7 @@
   [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 * zsh + [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [delta](https://github.com/dandavison/delta)
+* [starship](https://starship.rs/)
 
 Optional:
 
